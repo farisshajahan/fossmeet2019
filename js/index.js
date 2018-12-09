@@ -12,50 +12,13 @@
 	//To track opened popups
 	var menu_shown = false;
 	var faq_answer_shown = false;
+	
+	//To track navigation links. For scroll based response on navigation links.
+	var sections = $('section')
+		, nav = $('nav')
+		, header_height =  $header_top.outerHeight();
 
-// Function definitions using jquery 
-	function toggleMenu() {
-		$header_top.toggleClass('open-menu');
-		$nav.slideToggle("fast");
-		if(faq_answer_shown == false){
-			$faq_overlay.toggleClass('faq-overlay-dim');
-		} 
-		if(menu_shown){ menu_shown = false; } else {menu_shown = true;}
-	}
-	// Functions to toggle answer popup */
-		function hideAnswer() {
-			$answer_div.slideUp("fast");
-			if(menu_shown == false)
-			{
-				if($faq_overlay.hasClass('faq-overlay-dim')){
-					$faq_overlay.toggleClass('faq-overlay-dim');
-				}
-			}
-			faq_answer_shown = false;
-		}
-		function showAnswer() {
-			$answer_div.slideDown("fast");
-			if(menu_shown == false)
-				if($faq_overlay.hasClass('faq-overlay-dim') == false){
-					$faq_overlay.toggleClass('faq-overlay-dim');
-				}
-			faq_answer_shown = true;
-			console.log("OK");
-		}
-	// Function to set and display faq answers */
-		function answerFaq(question){
-				$answer_div.slideUp("fast", function(){
-					$question_display.html("<a onclick=\"hideAnswer();\" style=\"cursor: pointer\"><i class=\"fa fa-window-close\" aria-hidden=\"true\" style=\"padding-right: 1em; font-size: 2rem\"></i></a>"+questionsArray[question]);
-					$answer_display.html(answersArray[question]);			
-				});
-				showAnswer();
-		}
-		
-// Startup operations
-	$header_top.find('a').on('click', toggleMenu);
-	$('.nav-item').on('click', toggleMenu);
-
-// Filling FAQ Section questions
+// FAQ Questions and its answers
 //------------------------------
 	var questionsArray = [
 		"Do you provide participation certificates?",
@@ -102,7 +65,91 @@
 		"Yes, By February 15th, you will receive a confirmation mail from the FOSSMeet team."
 	];
 
-	for(i=0;i<questionsArray.length;i++){
+// Startup operations
+	$header_top.find('.toggle-menu').on('click', toggleMenu);
+	$('#collapse-nav').find('.nav-item').on('click', toggleMenu);
+	for(i=0;i<questionsArray.length;i++){ //Filling faq questions list
 		$('#faq-list').append("<li><a onclick=\"answerFaq("+i+")\" class=\"faq-question\">&#8226; "+questionsArray[i]+"</a></li>");
 	}
+	
+//Current viewing section based response on navigation bar links.
+	$(window).on('scroll', function () {
+		var cur_pos = $(this).scrollTop();
+	 
+		sections.each(function() {
+			var top = $(this).offset().top - header_height,
+					bottom = top + $(this).outerHeight();
+	 
+			if (cur_pos >= top && cur_pos <= bottom) {
+				nav.find('a').removeClass('active');
+				sections.removeClass('active');
+	 
+				$(this).addClass('active');
+				nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+			}
+		});
+	});
+	//Click based response of navigation links. it basically triggers scroll based response wrote in previous block
+	nav.find('a').on('click', function () {
+		var $el = $(this)
+			, id = $el.attr('href');
+	 
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - header_height/2
+		}, 500);
+	 
+		return false;
+	});
+	
+	//Closing nav when clicking outside nav 
+	$(document).click(function(e) {
+		if ($(e.target).is('#faq-overlay')) {
+				console.log("Collapse now");
+				if(menu_shown){ toggleMenu();}
+				if(faq_answer_shown){ hideAnswer();}
+			}
+	});
+	
+
+// Function definitions using jquery 
+	function toggleMenu() {
+		$header_top.toggleClass('open-menu');
+		$('#collapse-nav').slideToggle("fast");
+		$('.header-nav-container').toggleClass('hide')
+		if(faq_answer_shown){
+			hideAnswer();
+		}
+		$faq_overlay.toggleClass('faq-overlay-dim');
+		if(menu_shown){ menu_shown = false; } else {menu_shown = true;}
+	}
+	// Functions to toggle answer popup */
+		function hideAnswer() {
+			$answer_div.slideUp("fast");
+			if(menu_shown == false)
+			{
+				if($faq_overlay.hasClass('faq-overlay-dim')){
+					$faq_overlay.toggleClass('faq-overlay-dim');
+				}
+			}
+			faq_answer_shown = false;
+		}
+		function showAnswer() {
+			$answer_div.slideDown("fast");
+			if(menu_shown == false)
+				if($faq_overlay.hasClass('faq-overlay-dim') == false){
+					$faq_overlay.toggleClass('faq-overlay-dim');
+				}
+			faq_answer_shown = true;
+			console.log("OK");
+		}
+	// Function to set and display faq answers */
+		function answerFaq(question){
+				$answer_div.slideUp("fast", function(){
+					$question_display.html("<a onclick=\"hideAnswer();\" style=\"cursor: pointer\"><i class=\"fa fa-window-close\" aria-hidden=\"true\" style=\"padding-right: 1em; font-size: 2rem\"></i></a>"+questionsArray[question]);
+					$answer_display.html(answersArray[question]);			
+				});
+				showAnswer();
+		}
+		
+
 	

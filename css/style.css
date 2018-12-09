@@ -1,10 +1,9 @@
-/*@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);*/
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
 
 /* ICON STYLES - ICON FROM: http://fontastic.me/ Found in codepen. Kept as is.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/*@font-face {
+@font-face {
   font-family: "untitled-font-1";
   src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.eot");
   src:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.eot#iefix") format("embedded-opentype"),
@@ -13,13 +12,13 @@
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/untitled-font-1.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
-}*/
+}
 
 [class^="icon-"]:after,
 [class*=" icon-"]:after {
-  font-family: "Lato";
+  font-family: "untitled-font-1";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-variant: normal;
   text-transform: none;
   speak: none;
@@ -79,7 +78,7 @@
 /* General styling */
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0 auto;
-		font-family: 'Lato', sans-serif;
+		font-family: 'Alegreya Sans', Arial, sans-serif;
 		font-weight: bold;
 		}
 
@@ -96,7 +95,7 @@
 	* {
 		margin: 0;
 		padding: 0;
-		font-family: 'Lato', sans-serif;
+		font-family: 'Alegreya Sans', Arial, sans-serif;
 	}
 
 	nav ul li a {
@@ -133,6 +132,7 @@
 		display: inline-block;
 		position: relative;
 		top: 0px;
+		cursor: pointer;
 	}
 
 	.toggle-menu i {
@@ -164,7 +164,7 @@
 	}
 
 /* Navigation styling */
-	nav {
+	#collapse-nav {
 		max-height: calc(100vh - 50px);
 		overflow: auto;
 		display: none;
@@ -176,9 +176,25 @@
 		padding: 80px 0;
 		z-index: 15;
 	}
+	
+	.header-nav-container {
+		width: 800px; 
+		position: absolute; 
+		right: 70px;
+		transition: display .3s;
+	}
+	.header-nav-container.hide {
+		display: none;
+	}
+	#header-nav {
+		height: 40px;
+		width: 800px;
+		position: relative;
+		margin-right: 0;
+	}
 
 	nav ul {
-		padding: 0 10px;
+		padding: 0;
 		display: flex;
 	}
 
@@ -192,19 +208,22 @@
 		padding: 30px;
 		text-align: center;
 		transition: background .3s;
-		transition: border .2s
+		transition: border .2s;
+		line-height: 1.8rem;
+		border-bottom: 3px solid transparent;
 	}
 
 	nav li a:hover {
-		border-bottom: 5px solid #00BCD4;
+		border-bottom: 3px solid #00BCD4;
 	}
 
-	nav li.active a,
-	body.fp-viewing-fifthSection-1 #menu li:last-child a {
+	#collapse-nav li a.active {
 		background: #00BCD4;
 		color: white;
 	}
-
+	#header-nav li a.active {
+		border-bottom: 3px solid #00bcd4;
+	}
 	#menu li a {
 		padding: .5em;
 	}
@@ -335,17 +354,22 @@
 				position: fixed;
 				top: 0;
 				left: 0;
+				display: block;
 				height: 100%;
 				width: 100%;
 				box-sizing: border-box;
 				padding-top: 50px;
-				z-index: 3;
-				pointer-events: none;
+				z-index: 3;			
 				transition: background .3s;
 				}
+			.faq-overlay {
+				pointer-events: none;
+			}
+				
 			.faq-overlay-dim {
-				background: rgba(0,0,0,.5);
-				pointer-events: auto;
+				display: block !important;
+				background: rgba(0,0,0,.8);
+				pointer-events: auto !important;
 			}
 			#faq-answer-div {
 				padding: 1.5em;
@@ -358,7 +382,7 @@
 				}
 				
 			.faq-answer-sublist {
-				font-size: 1.5rem;
+				font-size: 1.8rem;
 			}
 		/* Social links and icons styling */
 			.social-icons-row {
@@ -393,6 +417,9 @@
 			}
 /* Responsive design styling - Standard mobile first mediaqueries */
 	@media (min-width: 0px) {
+		.header-nav-container {
+			display: none;
+		}
 		#section-title {
 			letter-spacing: 0;
 			}
@@ -445,15 +472,11 @@
 			}
 	}
 	@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-		.left-logo {
+		.header-nav-container {
 			display: grid;
-			width: 200px;
-			}
+		}
 		#section-title {
 			padding-left: 0;
-			}
-		.right-menu-button {
-			width: 200px;
 			}
 		.central-elements-wrapper {
 			width: 961px;
@@ -466,11 +489,14 @@
 		}
 	}
 	@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+		.left-logo {
+			display: grid;
+			}
 		.central-elements-wrapper {
 			width: 1025px;
 			}
 		.central-elements-wrapper-small {
-			width: 641px !important;
+			width: 800px !important;
 		}
 		#faq-answer-div {
 			right: 50px;
