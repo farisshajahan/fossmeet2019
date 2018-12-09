@@ -326,6 +326,12 @@
 			width: 100%;
 		}
 		
+		/*Logo section styling */
+		.cyan-gradient {
+			background-image: linear-gradient(to top left, #00AAFF, #00FFD4);
+			background-color: #00BCD4;
+		}
+		
 		/* People's tiles styling */	
 		.people-card {
 			height: auto;
