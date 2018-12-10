@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* ICON STYLES - ICON FROM: http://fontastic.me/ Found in codepen. Kept as is.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -42,9 +44,22 @@
 		background-color: gray;
 		}
 	.width-controlled-square {
-			width: 100%;
+			width: auto;
 			height: 0;
 			padding-bottom: 100%;
+	}
+	.stretched-4x3-box {
+		width: 100%;
+		height: 0;
+		margin: 0;
+		padding: 0 0 75% 0;
+	}
+	.size-standard-4x3 {
+		width: 288px;
+		height: 216px;
+	}
+	.padding-1rem {
+		padding: 1rem;
 	}
 		
 /* Material design color palette - Intented as a record to store colors. Used on some elements also */
@@ -72,13 +87,82 @@
 	.text-color-light {
 		color: white;
 		}
-	
-
-
+/* Material design font guidelines */
+	.html-font-material-design {
+		font-size: 62.5%;
+		font-family: Roboto, Arial, sans-serif;
+	}
+	.font-h1 {
+		font-size: 9.6rem;
+		font-weight: 200;
+		letter-spacing: -.15em;
+	}
+	.font-h2 {
+		font-size: 6.0rem;
+		font-weight: 200;
+		letter-spacing: -.05em;
+	}
+	.font-h3 {
+		font-size: 4.8rem;
+		font-weight: 400;
+		letter-spacing: 0rem;
+	}
+	.font-h4 {
+		font-size: 3.4rem;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+	}
+	.font-h5 {
+		font-size: 2.4rem;
+		font-weight: 400;
+		letter-spacing: 0rem;
+	}
+	.font-h6 {
+		font-size: 2.0rem;
+		font-weight: 500;
+		letter-spacing: .015rem;
+	}
+	.font-sub-1 {/* Subtitle font */
+		font-size: 1.6rem;
+		font-weight: 400;
+		letter-spacing: .015rem;	
+	}
+	.font-sub-2 {
+		font-size: 2.0rem;
+		font-weight: 500;
+		letter-spacing: .01rem;
+	}
+	.font-body-1 {
+		font-size: 1.6rem;
+		font-weight: 400;
+		letter-spacing: .05rem;
+	}
+	.font-body-2 {
+		font-size: 1.4rem;
+		font-weight: 400;
+		letter-spacing: .025em;	
+	}
+	.font-button {
+		font-size: 1.4rem;
+		font-weight: 500;
+		letter-spacing: .125em;		
+		text-transform: uppercase;
+	}
+	.font-caption {
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: .04rem;		
+	}
+	.font-overline {
+		font-size: 1.0rem;
+		font-weight: 400;
+		letter-spacing: .15rem;
+		text-transform: uppercase;
+	}
 /* General styling */
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0 auto;
-		font-family: 'Alegreya Sans', Arial, sans-serif;
+		font-family: 'Roboto', Arial, sans-serif;
 		font-weight: bold;
 		}
 
@@ -95,7 +179,7 @@
 	* {
 		margin: 0;
 		padding: 0;
-		font-family: 'Alegreya Sans', Arial, sans-serif;
+		font-family: 'Roboto', Arial, sans-serif;
 	}
 
 	nav ul li a {
@@ -120,7 +204,7 @@
 		width: 100%;
 		z-index: 12;
 		box-sizing: border-box;
-		background-color: white;
+		background-color: #455A64;
 		}
 	#section-title {
 		color: #455A64;
@@ -139,7 +223,7 @@
 		position: absolute;
 		display: block;
 		height: 2px;
-		background: black;
+		background: #eeeeee;
 		width: 30px;
 		left: 10px;
 		transition: all .3s;
@@ -178,19 +262,24 @@
 	}
 	
 	.header-nav-container {
-		width: 800px; 
-		position: absolute; 
-		right: 70px;
+		position: absolute;
+		top: 0;
+		right: 0;
 		transition: display .3s;
 	}
 	.header-nav-container.hide {
 		display: none;
 	}
 	#header-nav {
-		height: 40px;
-		width: 800px;
+		height: 50px;
 		position: relative;
 		margin-right: 0;
+	}
+	#header-nav #menu li a {
+		font-size: 16px;
+		line-height: 50px;
+		padding: 0 1rem;
+		color: #eeeeee;
 	}
 
 	nav ul {
@@ -208,12 +297,12 @@
 		padding: 30px;
 		text-align: center;
 		transition: background .3s;
-		transition: border .2s;
 		line-height: 1.8rem;
-		border-bottom: 3px solid transparent;
 	}
-
-	nav li a:hover {
+	#collapse-nav li a {
+		transition: border .2s
+	}
+	#collapse-nav li a:hover {
 		border-bottom: 3px solid #00BCD4;
 	}
 
@@ -221,8 +310,9 @@
 		background: #00BCD4;
 		color: white;
 	}
-	#header-nav li a.active {
-		border-bottom: 3px solid #00bcd4;
+	#header-nav #menu li a.active {
+		background-color: #eeeeee;
+		color: #455A64;
 	}
 	#menu li a {
 		padding: .5em;
@@ -316,11 +406,8 @@
 			padding-bottom: .5em;
 			display: block;
 			text-align: center;
-			font-size: 3.5rem;
 		}
 		.section-content-text {
-			font-size: 1.8rem;
-			line-height: 1.8rem;
 			display: block;
 			text-align: justify;
 			width: 100%;
@@ -333,9 +420,9 @@
 		
 		/* People's tiles styling */	
 		.people-card {
-			height: auto;
-			display: inline-block;
-			border: 1px solid white;
+			border-radius: 3px;
+			overflow: hidden;
+			max-width: 288px;
 			}	
 
 		/* FAQ and related styling */
@@ -466,6 +553,12 @@
 			}
 	}
 	@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		.header-nav-container {
+			display: grid;
+		}
+		.toggle-menu {
+			display: none;
+		}	
 		.central-elements-wrapper {
 			width: 641px;
 			}
@@ -477,9 +570,6 @@
 			}
 	}
 	@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-		.header-nav-container {
-			display: grid;
-		}
 		#section-title {
 			padding-left: 0;
 			}
@@ -497,6 +587,10 @@
 		.left-logo {
 			display: grid;
 			}
+		#header-nav #menu li a:hover {
+			background-color: #eeeeee;
+			color: #455A64;
+		}
 		.central-elements-wrapper {
 			width: 1025px;
 			}
@@ -515,7 +609,9 @@
 		}
 	}
 	@media (min-width:1281px) { /* hi-res laptops and desktops */ 
-
+		.central-elements-wrapper {
+			width: 1281px;
+		}
 	}
 /* End of mobile first mediaqueries */
 

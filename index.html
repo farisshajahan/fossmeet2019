@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="html-font-material-design">
 	<head>
 		<title>FOSSMeet'19 | FOSSCell NITC</title>
 
@@ -21,29 +21,29 @@
 	
 		<header>
 			<div class="header-top mdl-shadow--2dp bg-white">
-				<img src="resources/img/favicon.png">
+				<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/title-bar-icon.png" style="width: 25px">
 				
 				<!-- This section title is unused. Supposed to display section title in phone view (instead of full nav bar in laptops).
 				It can be achieved inside the javascript for the scroll controlled navigation bar -->
 				<h4 id="section-title" style="line-height: 50px; text-align: center; margin: 0;"></h4>
 				
-				<div class="header-nav-container">
+				<div class="header-nav-container" style="width: auto">
 					<nav id="header-nav">
-						<ul id="menu">
-							<li>
-								<a class="nav-item" href="#2">About FOSSMeet</a>
+						<ul id="menu" style="display: block; line-height: 50px">
+							<li style="display: table-cell">
+								<a class="nav-item font-button" href="#2">ABOUT</a>
 							</li>
-							<li>
-								<a class="nav-item" href="#3">Speakers</a>
+							<li style="display: table-cell">
+								<a class="nav-item font-button" href="#3">SPEAKERS</a>
 							</li>
-							<li>
-								<a class="nav-item" href="#4">Code of Conduct</a>
+							<li style="display: table-cell">
+								<a class="nav-item font-button" href="#4">CODE OF CONDUCT</a>
 							</li>
-							<li>
-								<a class="nav-item" href="#5">FAQ</a>
+							<li style="display: table-cell">
+								<a class="nav-item font-button" href="#5">FAQ</a>
 							</li>
-							<li>
-								<a class="nav-item" href="#6">Contact Us</a>
+							<li style="display: table-cell">
+								<a class="nav-item font-button" href="#6">CONTACT US</a>
 							</li>
 						</ul>
 					</nav>
@@ -60,19 +60,19 @@
 			<nav id="collapse-nav" class="mdl-shadow--2dp">
 				<ul id="menu">
 					<li>
-						<a class="nav-item" href="#2">About FOSSMeet</a>
+						<a class="nav-item font-button" href="#2">About FOSSMeet</a>
 					</li>
 					<li>
-						<a class="nav-item" href="#3">Speakers</a>
+						<a class="nav-item font-button" href="#3">Speakers</a>
 					</li>
 					<li>
-						<a class="nav-item" href="#4">Code of Conduct</a>
+						<a class="nav-item font-button" href="#4">Code of Conduct</a>
 					</li>
 					<li>
-						<a class="nav-item" href="#5">FAQ</a>
+						<a class="nav-item font-button" href="#5">FAQ</a>
 					</li>
 					<li>
-						<a class="nav-item" href="#6">Contact Us</a>
+						<a class="nav-item font-button" href="#6">Contact Us</a>
 					</li>
 				</ul>
 			</nav>
@@ -85,8 +85,8 @@
 			<!-- Logo Section -->
 			<section class="cyan-gradient under-design-overlay" id="1">
 				<div class="central-elements-wrapper">
-					<img style="display: table;" src="resources/img/logo.png" width="250px" class="mx-auto">
-					<h2 style="display: table; color: white; font-weight: 655;" class="mx-auto">FOSSMeet'19</h2>
+					<img style="display: table;" src="resources/img/logo.png" width="160px" class="mx-auto">
+					<h2 style="display: table; color: white;" class="mx-auto font-h2">FOSSMeet'19</h2>
 					<h4 style="display: table; color: white; font-weight: 550;" class="mx-auto">Think Free. Code Better</h2>
 				</div>
 			</section>
@@ -95,8 +95,8 @@
 			<section class="under-design-overlay" id="2">
 				<div class="central-elements-wrapper central-elements-wrapper-small primary-text-color">
 					<div class="gap-50px"></div>
-					<h2 class="section-content-title"><b>ABOUT</b> FOSSMeet</h2>
-					<p class="section-content-text">
+					<h3 class="section-content-title font-h3">About <b>FOSS</b>Meet</h3>
+					<p class="section-content-text font-body-1">
 						FOSSMeet is the annual event on Free and Open source software, conducted at National
 						Institute of Technology, Calicut to create awareness about and encourage the use of free
 						and open source softwares. The event includes a wide array of workshops, talks
@@ -116,39 +116,34 @@
 			<section class="primary-dark-bg-color over-design-overlay" id="3">
 				<div class="central-elements-wrapper">
 					<div class="gap-50px"></div>
-					<h2 class="section-content-title text-color-light">Speakers</h2>
+					<h3 class="section-content-title text-color-light font-h3">Speakers</h3>
 					<!-- Material design grid is used for responsive tiles of speakers -->
 					<div class="mdl-grid mdl-grid--no-spacing">
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-1.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1" style="text-align: center; padding: 1rem 0; margin: 0">Jaseem Abid</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-2.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1" style="text-align: center; padding: 1rem 0; margin: 0">Richard Stallman</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-1.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1" style="text-align: center; padding: 1rem 0; margin: 0">Jaseem Abid</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-2.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1" style="text-align: center; padding: 1rem 0; margin: 0">Richard Stallman</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card mdl-shadow--2dp" style="height: auto;">
-							<div class="width-controlled-square"></div>
-						</div>
+
 					</div>
 					<div class="gap-50px"></div>
 				</div>	
@@ -158,8 +153,8 @@
 			<section class="under-design-overlay" id="4">
 				<div class="central-elements-wrapper central-elements-wrapper-small">
 					<div class="gap-50px"></div>
-					<h2 class="section-content-title primary-text-color ">Code of Conduct</h2>
-					<p class="section-content-text primary-text-color">
+					<h3 class="section-content-title primary-text-color font-h3">Code of Conduct</h3>
+					<p class="section-content-text primary-text-color font-body-1">
 						FOSSMeet is dedicated to providing a harassment-free conference experience for everyone, 
 						regardless of gender, sexual orientation, disability, physical appearance, body size, race, 
 						or religion. We do not tolerate harassment of conference participants in any form. All 
@@ -173,7 +168,7 @@
 					</p>
 					<a href="" class="section-content-text">Read more</a>
 					<hr>
-					<p style="font-size: 1rem; display: block;" class="secondary-text-color">
+					<p style="display: block;" class="font-body-2 secondary-text-color">
 						LICENCE | This Code of Conduct was forked from the example policy from the Geek Feminism wiki, 
 						created by the Ada Initiative and other volunteers. which is under a 
 						Creative Commons Zero license.
@@ -187,10 +182,10 @@
 				<div class="central-elements-wrapper">
 					<div class="gap-50px"></div>
 					<div id="faq-questions-div">
-						<h2 class="section-content-title text-color-light">Frequently Asked Questions</h2>
+						<h3 class="section-content-title text-color-light font-h3">Frequently Asked Questions</h3>
 						<!-- list's font size is specifically styled to override material design library (>_<) -->
 						<!-- List items are entered by javascript -->
-						<ul id="faq-list" style="font-size: 1.8rem;">
+						<ul id="faq-list" class="font-body-1">
 						</ul>
 					</div>
 					<!-- Answers are displayed on popup outside of fullpage influence to support phone view. It's html is after fullpage container-->
@@ -203,9 +198,9 @@
 			<section class="primary-dark-bg-color over-design-overlay" id="6">
 				<div class="central-elements-wrapper">
 					<div class="gap-50px"></div>
-					<h2 class="section-content-title text-color-light">Contact Us</h2>
+					<h3 class="section-content-title text-color-light font-h3">Contact Us</h3>
 					<!-- Material design grid used for responsive tiles -->
-					<div class="mdl-grid mdl-grid--no-spacing">
+					<div class="mdl-grid mdl-grid--no-spacing" >
 						<!-- This social icons row is visible to mobile users, hidden to laptop users -->
 						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row hide-desktop-flex" style="padding: 15px 0;">
 							<a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a>
@@ -214,26 +209,33 @@
 							<a class="social-link" href="https://www.youtube.com/channel/UCwfNynjOSd3oPwIFqduJ9-Q" target="_blank"><i class="fa fa-youtube"></i></a>
 							<a class="social-link" href="http://webchat.freenode.net/?channels=%23FOSSCell%2C%23FOSSMeet&amp;randomnick=0" target="_blank"><i class="fa fa-hashtag"></i></a>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-2.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1 secondary-text-color" style="text-align: center; margin-top: 5px; margin-bottom: 0">CO-ORDINATOR</p>
+								<p class="font-body-1 primary-text-color" style="text-align: center; margin: 5px 0;">Yash Agarwal</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-1.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1 secondary-text-color" style="text-align: center; margin-top: 5px; margin-bottom: 0">HOSPITALITY</p>
+								<p class="font-body-1 primary-text-color" style="text-align: center; margin: 5px 0;">Kumar Tej</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-2.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1 secondary-text-color" style="text-align: center; margin-top: 5px; margin-bottom: 0">CO-ORDINATOR</p>
+								<p class="font-body-1 primary-text-color" style="text-align: center; margin: 5px 0;">Yash Agarwal</p>
+							</div>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone people-card">
-							<div style="width: 100%; height: 0; padding-bottom: 100%;"></div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone padding-1rem" style="height: auto;">
+							<div class="mx-auto bg-white people-card">
+								<img src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-1.jpg" style="max-width: 100%;"/>
+								<p class="font-body-1 secondary-text-color" style="text-align: center; margin-top: 5px; margin-bottom: 0">HOSPITALITY</p>
+								<p class="font-body-1 primary-text-color" style="text-align: center; margin: 5px 0;">Kumar Tej</p>
+							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row" style="padding: 15px 0;">
 							<a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a>
@@ -270,8 +272,8 @@
 		<div id="faq-overlay" class="faq-overlay">
 			<div id="faq-answer-div">
 				<!-- Answers are displayed in following elements by javascript -->
-				<h4 id="faq-answer-div-question" class="secondary-text-color" style="font-size: 1.2rem; margin-bottom: 1em;"></h4>
-				<p id="faq-answer-div-answer" class="primary-text-color" style="font-size: 1.8rem">Select a question from the list</p>
+				<h4 id="faq-answer-div-question" class="secondary-text-color font-body-2" style="margin-bottom: 1em;"></h4>
+				<p id="faq-answer-div-answer" class="primary-text-color font-body-1">Select a question from the list</p>
 			</div>
 		</div>
 
@@ -279,7 +281,7 @@
 		<!-- Material design library Javascript -->
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		
-		<!-- Jquery and jquery.slimscroll plugin for in-page scrolling of fullpage pages -->
+		<!-- Jquery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 		<!-- All custom javascripts -->
