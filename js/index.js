@@ -55,10 +55,10 @@
 		"No, you can't register for specific workshops/talks. There is no explicit registration fees for specific workshops/talks.",
 		
 		"Yes, different accomodation facilities will be provided for the students and the professionals from friday night till Sunday night, for the entire duration of FOSSMeet. Accomodation charges (for the entire FOSSMeet event)+:<br><br>"+
-		"<ul class=\"faq-answer-sublist\"><b>"+
+		"<ul class=\"font-type-content font-body-1\">"+
 			"<li>Students: &#8377;50 - &#8377;100*</li>"+
 			"<li>Professionals: &#8377;200 - &#8377;400*</li>"+
-		"</b></ul>",
+		"</ul>",
 		
 		"Yes, each participant has to register seperately in the website. This it to keep track of your workshop/talk preference, food preference and hostel accommodation.",
 		
