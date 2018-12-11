@@ -55,7 +55,7 @@
 		"No, you can't register for specific workshops/talks. There is no explicit registration fees for specific workshops/talks.",
 		
 		"Yes, different accomodation facilities will be provided for the students and the professionals from friday night till Sunday night, for the entire duration of FOSSMeet. Accomodation charges (for the entire FOSSMeet event)+:<br><br>"+
-		"<ul class=\"font-type-content font-body-1\">"+
+		"<ul class=\"list font-type-content font-body-1\">"+
 			"<li>Students: &#8377;50 - &#8377;100*</li>"+
 			"<li>Professionals: &#8377;200 - &#8377;400*</li>"+
 		"</ul>",
@@ -93,7 +93,7 @@
 	nav.find('a').on('click', function () {
 		var $el = $(this)
 			, id = $el.attr('href');
-	 
+		hideAnswer();
 		$('html, body').animate({
 			scrollTop: $(id).offset().top - header_height/2
 		}, 500);
@@ -145,7 +145,7 @@
 	// Function to set and display faq answers */
 		function answerFaq(question){
 				$answer_div.slideUp("fast", function(){
-					$question_display.html("<a onclick=\"hideAnswer();\" style=\"cursor: pointer\"><i class=\"fa fa-window-close\" aria-hidden=\"true\" style=\"padding-right: 1em; font-size: 2rem\"></i></a>"+questionsArray[question]);
+					$question_display.html(questionsArray[question]);
 					$answer_display.html(answersArray[question]);			
 				});
 				showAnswer();

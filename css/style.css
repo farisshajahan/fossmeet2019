@@ -108,7 +108,7 @@
 		}
 		
 	.font-button {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		font-weight: 500;
 		letter-spacing: .125em;		
 		text-transform: uppercase;
@@ -214,7 +214,6 @@
 		padding: 30px;
 		text-align: center;
 		transition: background .3s;
-		line-height: 1.8rem;
 	}
 	nav ul li a {
 		color: #455A64;
@@ -259,11 +258,11 @@
 		position: fixed;
 		top: 50px;
 		width: 100%;
-		padding: 80px 0;
 		z-index: 15;
 	}
 	#collapse-nav li a {
-		transition: border .2s
+		transition: border .2s;
+		line-height: 25px;
 	}
 	#collapse-nav li a:hover {
 		border-bottom: 3px solid #00BCD4;
@@ -335,6 +334,7 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
+		padding: 25px 0;
 	}
 	/* General section contents styling */
 		.central-elements-wrapper {
@@ -352,9 +352,9 @@
 		}
 		
 		.section-content-title {
-			padding-bottom: .5em;
 			display: block;
 			text-align: center;
+			margin-top: 0;
 		}
 		.section-content-text {
 			display: block;
@@ -365,16 +365,75 @@
 		.cyan-gradient {
 			background-image: linear-gradient(to top left, #00AAFF, #00FFD4);
 		}
-		
-		/* People's tiles styling */	
+		/* Speakers section */
+		.speakers-section {
+			background-image: linear-gradient(to top left, black, #455A64); 
+			height: auto; 
+			min-height: 0;
+		}
+		/* People's tiles styling */
+		.people-card-wrapper {
+			text-decoration: none;
+		}
 		.people-card {
 			border-radius: 3px;
 			overflow: hidden;
 			max-width: 288px;
+			position: relative;
 			}
-			.people-card .img {
+			.people-card .hover-overlay {
+				height: 100%;
+				width: 100%;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: background .3s;
+				box-sizing: border-box;
+				}
+				.people-card .hover-overlay:hover {
+					background: rgba(0, 0, 0, .8);
+					border: 2px solid #00BCD4;
+				}
+				.people-card .hover-overlay .name{
+					visibility: hidden;
+					color: #00BCD4;
+					font-weight: 500;
+					margin-top: 10px;
+				}
+					.people-card .hover-overlay:hover .name{
+						visibility: visible;
+					}
+				.people-card .hover-overlay .action-button {
+					background-color: transparent;
+					border: 2px solid #00BCD4;
+					padding: 10px;
+					color: #00BCD4;
+					cursor: pointer;
+					border-radius: 5px;	
+					height: 50px;
+					visibility: hidden;
+				}
+					.people-card .hover-overlay:hover .action-button{
+						visibility: visible;
+					}
+				.people-card .hover-overlay .action-button:hover {
+					background-color: #00BCD4;
+					color: white;
+				}				
+			.people-card .photo {
 				max-width: 100%;
 			}
+			.people-card .collapse-photo {/*Experimental, not used */
+				display: none;
+				transition: all 1s linear;
+			}
+				.people-card-wrapper:hover .people-card .collapse-photo {
+					display: block;
+				}
 			.people-card .details {
 				padding: 1rem;
 			}
@@ -386,6 +445,12 @@
 				.people-card .name {
 					text-align: center; 
 					margin: 0;
+					font-weight: 500;
+				}
+				.people-card .phone {
+					text-align: center; 
+					margin: 0;
+					font-weight: 500;
 				}
 
 		/* FAQ and related styling */
@@ -434,6 +499,26 @@
 				pointer-events: auto;
 				display: none;
 				overflow: auto;
+				border-radius: 5px;
+				}
+				#faq-answer-div-question {
+					color: #00BCD4;
+					font-weight: bold;
+				}
+				#faq-answer-div .close {
+					background-color: transparent;
+					border: 2px solid #00BCD4;
+					padding: 10px;
+					color: #00BCD4;
+					cursor: pointer;
+					border-radius: 5px;
+				}
+				#faq-answer-div .close:hover {
+					background-color: #00BCD4;
+					color: white;
+				}
+				#faq-anwer-div #faq-answer-div-answer .list {
+
 				}
 		/* Social links and icons styling */
 			.social-icons-row {
@@ -475,6 +560,12 @@
 		#section-title {
 			letter-spacing: 0;
 			}
+		#collapse-nav {
+			padding: 25px 0;
+		}
+		.people-card .hover-overlay {
+			display: none;
+		}
 		.hide-phone {
 			display: none;
 			}
@@ -552,6 +643,9 @@
 			}
 		.central-elements-wrapper-small {
 			width: 800px !important;
+		}
+		.people-card .hover-overlay {
+			display: flex;
 		}
 		#faq-answer-div {
 			right: 50px;
