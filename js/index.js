@@ -12,6 +12,7 @@
 	//To track opened popups
 	var menu_shown = false;
 	var faq_answer_shown = false;
+	var full_policy_shown = false;
 	
 	//To track navigation links. For scroll based response on navigation links.
 	var sections = $('section')
@@ -67,6 +68,18 @@
 
 // Startup operations
 	$header_top.find('.toggle-menu').on('click', toggleMenu);
+	
+	$('#see-full-policy-button').on('click', function() {  //Full code of content button functioning
+		$('#full-policy').slideToggle("fast");
+		if(full_policy_shown){
+			$('#see-full-policy-button').text('SHOW FULL POLICY');
+			full_policy_shown = false;
+		} else {
+			$('#see-full-policy-button').text('HIDE FULL POLICY');
+			full_policy_shown = true;
+		}
+	});
+	
 	$('#collapse-nav').find('.nav-item').on('click', toggleMenu);
 	for(i=0;i<questionsArray.length;i++){ //Filling faq questions list
 		$('#faq-list').append("<li><a onclick=\"answerFaq("+i+")\" class=\"faq-question\">&#8226; "+questionsArray[i]+"</a></li>");

@@ -336,6 +336,13 @@
 		position: relative;
 		padding: 25px 0;
 	}
+	.parallax {
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 	/* General section contents styling */
 		.central-elements-wrapper {
 			position: relative;
@@ -367,7 +374,7 @@
 		}
 		/* Speakers section */
 		.speakers-section {
-			background-image: linear-gradient(to top left, black, #455A64); 
+			background-image: radial-gradient(#455A64, rgb(36, 36, 36));
 			height: auto; 
 			min-height: 0;
 		}
@@ -426,6 +433,8 @@
 				}				
 			.people-card .photo {
 				max-width: 100%;
+				height: 216px;
+				position: relative;
 			}
 			.people-card .collapse-photo {/*Experimental, not used */
 				display: none;
@@ -452,6 +461,93 @@
 					margin: 0;
 					font-weight: 500;
 				}
+		/* Code of Conduct Section */
+		.coc {
+			padding-top: 50px;
+			box-sizing: border-box;
+			height: auto;
+		}
+		.coc-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.coc .title {
+			text-align: center;
+			margin-bottom: 20px;
+			}
+		.coc .intro {
+			padding: 1rem;
+			}
+		.coc .intro .question {
+			font-size: 2.5rem;
+			font-weight: 500;
+			letter-spacing: .015rem;
+			font-family: Lato, Arial, sans-serif;
+			}
+		.coc .intro .description {
+			font-weight: 400;
+			text-align: justify;
+			}
+		.coc .visuals .v-container {
+			padding: 1rem;
+		}
+		.coc .visuals .v-container .card {
+			padding: 1rem;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			border: 1px solid #455A64;
+			}
+		.coc .visuals .v-container .card .visual {
+			width: 200px;
+			height: 200px;
+			margin-top: 16px;
+		}
+		.coc .visuals .v-container .card .text {
+			text-align: center;
+			padding-top: 1rem;
+			font-weight: 500;
+		}
+		.coc .read-button {
+			padding: 1rem;
+			background-color: #00BCD4;
+			border-radius: 5px;
+			border: none;
+			color: white;
+			margin-top: 1rem;
+			cursor: pointer;
+			
+			}
+		.coc .full-coc {
+			padding: 1rem;
+			margin-top: 2rem;
+			display: none;
+			}
+		.coc .full-coc .title {
+			font-size: 2.5rem;
+			font-weight: 500;
+			letter-spacing: .015rem;
+			font-family: Lato, Arial, sans-serif;
+			}
+		.coc .full-coc .content {
+			text-align: justify;
+			text-align: justify;
+		}
+		.coc .warning {
+			padding: 1rem;
+			margin-top: 1rem;
+			color: red;
+			font-weight: 500;
+			margin-bottom: 0;
+			text-align: justify;
+			}
+		.coc .licence-info {
+			padding: 1rem;
+			text-align: justify;
+		}		
 
 		/* FAQ and related styling */
 		#faq-questions-div {
@@ -563,6 +659,9 @@
 		#collapse-nav {
 			padding: 25px 0;
 		}
+		.parallax {
+			display: none;
+		}
 		.people-card .hover-overlay {
 			display: none;
 		}
@@ -605,7 +704,10 @@
 		}
 		.toggle-menu {
 			display: none;
-		}	
+		}
+		.parallax {
+			display: block;
+		}
 		.central-elements-wrapper {
 			width: 641px;
 			}
