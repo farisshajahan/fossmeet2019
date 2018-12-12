@@ -16,16 +16,18 @@
 	.bg-gray {
 		background-color: gray;
 		}
-	.width-controlled-square {
-			width: auto;
+	.stretched-square {
+			width: 100%;
 			height: 0;
-			padding-bottom: 100%;
+			padding: 0 0 100% 0;
+			position: relative;
 	}
 	.stretched-4x3-box {
 		width: 100%;
 		height: 0;
 		margin: 0;
 		padding: 0 0 75% 0;
+		position: relative;
 	}
 	.size-standard-4x3 {
 		width: 288px;
@@ -372,6 +374,14 @@
 		.cyan-gradient {
 			background-image: linear-gradient(to top left, #00AAFF, #00FFD4);
 		}
+		/* About Section styling */
+		.about .subtitle {
+			font-size: 2.2rem;
+			font-weight: 500;
+			letter-spacing: .015rem;
+			font-family: Lato, Arial, sans-serif;
+			text-align: center;
+		}
 		/* Speakers section */
 		.speakers-section {
 			background-image: radial-gradient(#455A64, rgb(36, 36, 36));
@@ -379,6 +389,9 @@
 			min-height: 0;
 		}
 		/* People's tiles styling */
+		.people-container {
+			padding: 1rem;
+		}
 		.people-card-wrapper {
 			text-decoration: none;
 		}
@@ -387,6 +400,15 @@
 			overflow: hidden;
 			max-width: 288px;
 			position: relative;
+			box-sizing: border-box;
+			border: 1px solid white;
+			border-radius: 6px;
+			transition: border-radius .2s;
+			
+			}
+			.people-card-wrapper:hover .people-card {
+				border: 1px solid #00BCD4;
+				border-radius: 2rem;
 			}
 			.people-card .hover-overlay {
 				height: 100%;
@@ -396,14 +418,14 @@
 				align-items: center;
 				padding: 0;
 				position: absolute;
+				display: flex;
 				top: 0;
 				left: 0;
 				transition: background .3s;
 				box-sizing: border-box;
 				}
-				.people-card .hover-overlay:hover {
+				.people-card-wrapper:hover .people-card .hover-overlay{
 					background: rgba(0, 0, 0, .8);
-					border: 2px solid #00BCD4;
 				}
 				.people-card .hover-overlay .name{
 					visibility: hidden;
@@ -411,7 +433,7 @@
 					font-weight: 500;
 					margin-top: 10px;
 				}
-					.people-card .hover-overlay:hover .name{
+					.people-card-wrapper:hover .people-card .hover-overlay .name{
 						visibility: visible;
 					}
 				.people-card .hover-overlay .action-button {
@@ -424,17 +446,22 @@
 					height: 50px;
 					visibility: hidden;
 				}
-					.people-card .hover-overlay:hover .action-button{
+					.people-card-wrapper:hover .people-card .hover-overlay .action-button{
 						visibility: visible;
 					}
 				.people-card .hover-overlay .action-button:hover {
 					background-color: #00BCD4;
 					color: white;
-				}				
-			.people-card .photo {
-				max-width: 100%;
-				height: 216px;
+				}
+			.people-card .photo-holder {
+				width: 100%;
+				max-width: 286px;
 				position: relative;
+			}
+			.people-card .photo {
+				width: 100%;
+				position: absolute;
+				top: 0;
 			}
 			.people-card .collapse-photo {/*Experimental, not used */
 				display: none;
@@ -477,10 +504,9 @@
 			margin-bottom: 20px;
 			}
 		.coc .intro {
-			padding: 1rem;
 			}
 		.coc .intro .question {
-			font-size: 2.5rem;
+			font-size: 2.2rem;
 			font-weight: 500;
 			letter-spacing: .015rem;
 			font-family: Lato, Arial, sans-serif;
@@ -489,27 +515,39 @@
 			font-weight: 400;
 			text-align: justify;
 			}
+		.coc .mdl-grid {
+			margin: 0 -1rem;
+		}
 		.coc .visuals .v-container {
 			padding: 1rem;
 		}
 		.coc .visuals .v-container .card {
 			padding: 1rem;
 			width: 100%;
+			height: 100%;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
 			box-sizing: border-box;
-			border: 1px solid #455A64;
+			border: 2px solid #455A64;
 			}
-		.coc .visuals .v-container .card .visual {
-			width: 200px;
-			height: 200px;
+		.coc .visuals .v-container .card .visual-holder {
+			max-width: 100px;
+			width: 100%;
 			margin-top: 16px;
+			height: auto;
+		}
+		.coc .visuals .v-container .card .visual-holder .visual {
+			position: absolute;
+			top: 0;
+			width: 100%;
 		}
 		.coc .visuals .v-container .card .text {
 			text-align: center;
 			padding-top: 1rem;
 			font-weight: 500;
+			position: relative;
+			color: black;
 		}
 		.coc .read-button {
 			padding: 1rem;
@@ -522,7 +560,7 @@
 			
 			}
 		.coc .full-coc {
-			padding: 1rem;
+
 			margin-top: 2rem;
 			display: none;
 			}
@@ -537,15 +575,15 @@
 			text-align: justify;
 		}
 		.coc .warning {
-			padding: 1rem;
+
 			margin-top: 1rem;
-			color: red;
+			color: #D81B60;
 			font-weight: 500;
 			margin-bottom: 0;
 			text-align: justify;
 			}
 		.coc .licence-info {
-			padding: 1rem;
+
 			text-align: justify;
 		}		
 
@@ -662,9 +700,6 @@
 		.parallax {
 			display: none;
 		}
-		.people-card .hover-overlay {
-			display: none;
-		}
 		.hide-phone {
 			display: none;
 			}
@@ -745,9 +780,6 @@
 			}
 		.central-elements-wrapper-small {
 			width: 800px !important;
-		}
-		.people-card .hover-overlay {
-			display: flex;
 		}
 		#faq-answer-div {
 			right: 50px;
