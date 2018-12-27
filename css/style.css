@@ -336,7 +336,8 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		padding: 25px 0;
+		padding: 50px 0;
+		box-sizing: border-box;
 	}
 	.parallax {
 		/* Create the parallax scrolling effect */
@@ -401,13 +402,13 @@
 			max-width: 288px;
 			position: relative;
 			box-sizing: border-box;
-			border: 1px solid white;
+			border: 2px solid gray;
 			border-radius: 6px;
 			transition: border-radius .2s;
 			
 			}
 			.people-card-wrapper:hover .people-card {
-				border: 1px solid #00BCD4;
+				border: 2px solid #00BCD4;
 				border-radius: 2rem;
 			}
 			.people-card .hover-overlay {
@@ -490,7 +491,6 @@
 				}
 		/* Code of Conduct Section */
 		.coc {
-			padding-top: 50px;
 			box-sizing: border-box;
 			height: auto;
 		}
