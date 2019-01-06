@@ -18,7 +18,10 @@
 	var sections = $('section')
 		, nav = $('nav')
 		, header_height =  $header_top.outerHeight();
-
+$(document).ready(function() {
+			$('.preload-container').fadeOut();
+});
+		
 // FAQ Questions and its answers
 //------------------------------
 	var questionsArray = [
@@ -88,7 +91,7 @@
 //Current viewing section based response on navigation bar links.
 	$(window).on('scroll', function () {
 		var cur_pos = $(this).scrollTop();
-	 
+		console.log(cur_pos);
 		sections.each(function() {
 			var top = $(this).offset().top - header_height,
 					bottom = top + $(this).outerHeight();
@@ -99,8 +102,29 @@
 	 
 				$(this).addClass('active');
 				nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+				console.log($(this).attr('id'));
 			}
 		});
+		
+		var about_top = $('#2').offset().top - 50;
+		console.log("OK");
+		if(cur_pos >= about_top){
+			if($header_top.hasClass("primary-dark-bg-color")==false){
+					$header_top.toggleClass("primary-dark-bg-color");
+			}
+			if($header_top.hasClass("mdl-shadow--2dp")==false){
+				$header_top.toggleClass("mdl-shadow--2dp");
+			}
+		}
+		else {
+			if($header_top.hasClass("primary-dark-bg-color")==true){
+				$header_top.toggleClass("primary-dark-bg-color");
+			}
+			if($header_top.hasClass("mdl-shadow--2dp")==true){
+				$header_top.toggleClass("mdl-shadow--2dp");
+			}
+		}
+
 	});
 	//Click based response of navigation links. it basically triggers scroll based response wrote in previous block
 	nav.find('a').on('click', function () {
@@ -123,8 +147,21 @@
 			}
 	});
 	
+// Function definitions javascript 
+	function visitSite(url){
+		window.location.assign(url);
+	}
 
-// Function definitions using jquery 
+
+// Function definitions using jquery
+	function copyContentToClipboard($input){
+		var $tocopy = $input.find('input');
+		$tocopy.select();
+		document.execCommand("copy");
+		// alert("Copied the contact " + $tocopy.val() + " to clipboard");
+		showCopiedToast();
+	}
+	
 	function toggleMenu() {
 		$header_top.toggleClass('open-menu');
 		$('#collapse-nav').slideToggle("fast");

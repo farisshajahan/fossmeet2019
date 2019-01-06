@@ -59,6 +59,9 @@
 	.text-color-light {
 		color: white;
 		}
+	.bg-dark {
+		background-color: #212121;
+	}
 
 /* Lato and Montserrat font guidelines */
 	.html-font { /* Set root font size. Use this class on html element */
@@ -137,7 +140,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background: rgba(255, 255, 255, 0.3);
 		height: 50px;
 		padding: 0 10px;
 		position: fixed;
@@ -145,7 +147,8 @@
 		width: 100%;
 		z-index: 12;
 		box-sizing: border-box;
-		background-color: #455A64;
+		transition: background-color .5s;
+		/* border-bottom: 1px solid #eeeeee; */
 		}
 	.left-logo {
 		position: absolute;
@@ -248,7 +251,7 @@
 		font-size: 16px;
 		line-height: 50px;
 		padding: 0 1rem;
-		color: #eeeeee;
+		color: white;
 	}
 
 	#collapse-nav {
@@ -332,12 +335,16 @@
 /* Sections and child items styling 
 -----------------------------------*/
 	section {
-		min-height: 100vh;
+		/* min-height: 100vh; */
 		display: flex;
 		flex-direction: column;
 		position: relative;
 		padding: 50px 0;
 		box-sizing: border-box;
+	}
+
+	.logo-section {
+		min-height: 100vh;
 	}
 	.parallax {
 		/* Create the parallax scrolling effect */
@@ -387,7 +394,6 @@
 		.speakers-section {
 			background-image: radial-gradient(#455A64, rgb(36, 36, 36));
 			height: auto; 
-			min-height: 0;
 		}
 		/* People's tiles styling */
 		.people-container {
@@ -432,7 +438,7 @@
 					visibility: hidden;
 					color: #00BCD4;
 					font-weight: 500;
-					margin-top: 10px;
+					margin: 0 0 0 0;
 				}
 					.people-card-wrapper:hover .people-card .hover-overlay .name{
 						visibility: visible;
@@ -446,7 +452,17 @@
 					border-radius: 5px;	
 					height: 50px;
 					visibility: hidden;
+					margin-bottom: 10px;
+					margin-top: 5px;
 				}
+					.people-card .hover-overlay .action-button .copy-text {
+						pointer-events: none;
+						background-color: transparent;
+						color: #00BCD4;
+						border: 0;
+						text-align: center;
+						width: 150px;
+					}
 					.people-card-wrapper:hover .people-card .hover-overlay .action-button{
 						visibility: visible;
 					}
@@ -454,6 +470,9 @@
 					background-color: #00BCD4;
 					color: white;
 				}
+					.people-card .hover-overlay .action-button:hover .copy-text {
+						color: white;
+					}
 			.people-card .photo-holder {
 				width: 100%;
 				max-width: 286px;
@@ -528,6 +547,7 @@
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			justify-content: center;
 			box-sizing: border-box;
 			border: 2px solid #455A64;
 			}
@@ -536,6 +556,7 @@
 			width: 100%;
 			margin-top: 16px;
 			height: auto;
+			display: none;
 		}
 		.coc .visuals .v-container .card .visual-holder .visual {
 			position: absolute;
@@ -654,6 +675,12 @@
 				#faq-anwer-div #faq-answer-div-answer .list {
 
 				}
+		
+		/* Contact section */
+			.contact {
+				/* background-image: radial-gradient(gray, #222222); */
+				background-color: #212121;
+			}
 		/* Social links and icons styling */
 			.social-icons-row {
 				width: 100%;
@@ -685,7 +712,11 @@
 						text-decoration:none;
 						color: #00BCD4;
 					}
-
+	/*Footer */
+		.footer {
+			padding: 25px 0 25px 0;
+			box-sizing: border-box;
+		}
 /* Responsive design styling - Standard mobile first mediaqueries */
 	@media (min-width: 0px) {
 		#header-nav {
@@ -794,11 +825,14 @@
 	}
 	@media (min-width:1281px) { /* hi-res laptops and desktops */ 
 		.central-elements-wrapper {
-			width: 1281px;
 		}
 	}
 /* End of mobile first mediaqueries */
-
+@media (max-height: 1000px) {
+	section {
+		min-height: 100vh;
+	}
+}
 /* This is part of code found in codepen for the navigation bar. Kept as it is,
 	It does not belong to mobile first mediaqueries group */
 	@media screen and (max-width: 767px) {
@@ -824,3 +858,77 @@
 			padding: 3px;
 		}
 	}
+	
+	
+/* ============ PRELOADER CODEPEN ============*/
+.preload-container {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #181d27;
+	z-index: 13;
+}
+.loaded {
+	display: none;
+}
+.wrapper {
+  max-width: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.svg {
+  width: 100%;
+  height: 100vh;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-animation: rotate 2s cubic-bezier(0.51, 0.92, 0.24, 1) forwards infinite;
+          animation: rotate 2s cubic-bezier(0.51, 0.92, 0.24, 1) forwards infinite;
+}
+
+.path {
+  stroke-dasharray: 590;
+  stroke-dashoffset: 0;
+  stroke: #ed1e79;
+  fill: none;
+  -webkit-animation: dash 2s cubic-bezier(0.51, 0.92, 0.24, 1) forwards infinite;
+          animation: dash 2s cubic-bezier(0.51, 0.92, 0.24, 1) forwards infinite;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}

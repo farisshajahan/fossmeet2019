@@ -23,10 +23,11 @@
 	</head>
 	
 		<header>
-			<div class="header-top mdl-shadow--2dp">
+			<div class="header-top">
 			
-				<a href="#1" class="left-logo" style="margin: 0; padding: 0;"><img src="resources/img/header-icon.png" style="width: 25px"/></a>
-				
+				<a href="#1" class="left-logo" style="margin: 0; padding: 0;">
+								<img src="resources/img/header-logo.png" style="width: 150px;"/>
+				</a>
 				<!-- This section title is unused. Kept for future. Supposed to display section title in phone view (instead of full nav bar in laptops).
 				It can be achieved inside the javascript for the scroll controlled navigation bar -->
 				<h4 id="section-title" style="line-height: 50px; text-align: center; margin: 0;"></h4>
@@ -83,13 +84,21 @@
 		</header>
 	
 	<body>
+		<!-- Preloader -->
+		<div class="preload-container">
+			<div class="wrapper">
+				<svg class="svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle class="path" stroke-width="10" stroke-miterlimit="10" class="cls-1 path" cx="100" cy="100" r="94"/></svg>
+			</div>
+		</div>
+		
+		
 		
 		<!-- Container of sections and design overlay. 
 		Section ids are numbered to code scroll based response of navigation in javascript-->
-		<div id="1" class="sections">
+		<div class="sections">
 			
 			<!-- Logo Section -->
-			<section class="cyan-gradient under-design-overlay" id="1">
+			<section class="logo-section cyan-gradient under-design-overlay" id="1">
 				<div class="central-elements-wrapper">
 					<img style="display: table;" src="resources/img/logo.png" width="160px" class="mx-auto"/>
 					<h3 style="display: table; color: white; text-transform: none; font-weight: 700" class="mx-auto font-h3 font-type-title">FOSSMeet'19</h3>
@@ -97,7 +106,6 @@
 				</div>
 			</section>
 			
-			<div class="parallax" style="background-image: url('http://triplefive.000webhostapp.com/fossmeet/sample-imgs/parallax.jpg'); height: 50vh;"></div>
 			<!-- ABOUT SECTION -->
 			<section class="about under-design-overlay" id="2">
 				<div class="central-elements-wrapper central-elements-wrapper-small">
@@ -127,79 +135,217 @@
 					<h3 class="section-content-title text-color-light font-type-title">Speakers</h3>
 					<!-- Material design grid is used for responsive tiles of speakers -->
 					<div class="mdl-grid mdl-grid--no-spacing">
+					
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
 							<a class="people-card-wrapper">
 								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
 									<div class="photo-holder">
 										<div class="stretched-4x3-box">
-											<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-1.jpg"/>
+											<img class="photo" src="/resources/img/speakers/richard-stallman.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Richard Stallman</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('https://stallman.org/');">VISIT SITE</button>
+										<p class="name font-body-1 font-type-content">Richard Stallman</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/marco-fioretti.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Marco Fioretti</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('http://mfioretti.com/');">VISIT WEBSITE</button>
+										<p class="name font-body-1 font-type-content">Marco Fieoretti</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/sasi-kumar.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Dr. Sasi Kumar</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('https://www.linkedin.com/in/sasi-kumar-1a48688/?originalSubdomain=in');">LINKEDIN</button>
+										<p class="name font-body-1 font-type-content">Dr. Sasi Kumar</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/pramode.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Pramode C E</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('http://pramode.net/');">SEE PROFILE</button>
+										<p class="name font-body-1 font-type-content">Pramode C E</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/pirate-praveen.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Pirate Praveen</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('http://www.j4v4m4n.in/');">VISIT BLOG</button>
+										<p class="name font-body-1 font-type-content">Pirate Praveen</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/sruthi-chandran.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Sruthi Chandran</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('https://poddery.com/u/srud');">PODDERY</button>
+										<p class="name font-body-1 font-type-content">Sruthi Chandran</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/baiju-muthukadan.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Baiju Muthukadan</p>
+									</div>
+									<div class="hover-overlay">
+										<!-- <button class="action-button font-button" onclick="visitSite('https://');">VISIT BLOG</button> -->
+										<p class="name font-body-1 font-type-content">Baiju Muthukadan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/abhijith.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Abhijith A M</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('http://www.coep.org.in/mycoep/abhijitcompcoepacin');">SEE PROFILE</button>
+										<p class="name font-body-1 font-type-content">Abhijith A M</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/balasankar.jpg"/>
+										</div>
+									</div>
+									<div class="details">
+										<p class="name font-body-1 font-type-content primary-text-color">Balasankar C</p>
+									</div>
+									<div class="hover-overlay">
+										<button class="action-button font-button" onclick="visitSite('https://balasankarc.in/');">VISIT WEBSITE</button>
+										<p class="name font-body-1 font-type-content">Balasankar C</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<a class="people-card-wrapper">
+								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
+									<div class="photo-holder">
+										<div class="stretched-4x3-box">
+											<img class="photo" src="/resources/img/speakers/jaseem-abid.jpg"/>
 										</div>
 									</div>
 									<div class="details">
 										<p class="name font-body-1 font-type-content primary-text-color">Jaseem Abid</p>
 									</div>
 									<div class="hover-overlay">
-										<button class="action-button font-button">VISIT BLOG</button>
+										<button class="action-button font-button" onclick="visitSite('https://jaseemabid.github.io/');">VISIT BLOG</button>
 										<p class="name font-body-1 font-type-content">Jaseem Abid</p>
 									</div>
 								</div>
 							</a>
 						</div>
+						
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
 							<a class="people-card-wrapper">
 								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
 									<div class="photo-holder">
 										<div class="stretched-4x3-box">
-											<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-1.jpg"/>
+											<img class="photo" src="/resources/img/speakers/vibhoothi-anand.jpg"/>
 										</div>
 									</div>
 									<div class="details">
-										<p class="name font-body-1 font-type-content primary-text-color">Jaseem Abid</p>
+										<p class="name font-body-1 font-type-content primary-text-color">Vibhoothi Anand</p>
 									</div>
 									<div class="hover-overlay">
-										<button class="action-button font-button">VISIT BLOG</button>
-										<p class="name font-body-1 font-type-content">Jaseem Abid</p>
+										<button class="action-button font-button" onclick="visitSite('https://vibhoothiiaanand.wordpress.com/');">VISIT BLOG</button>
+										<p class="name font-body-1 font-type-content">Vibhoothi Anand</p>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
-							<a class="people-card-wrapper">
-								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
-									<div class="photo-holder">
-										<div class="stretched-4x3-box">
-											<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-1.jpg"/>
-										</div>
-									</div>
-									<div class="details">
-										<p class="name font-body-1 font-type-content primary-text-color">Jaseem Abid</p>
-									</div>
-									<div class="hover-overlay">
-										<button class="action-button font-button">VISIT BLOG</button>
-										<p class="name font-body-1 font-type-content">Jaseem Abid</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
-							<a class="people-card-wrapper">
-								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
-									<div class="photo-holder">
-										<div class="stretched-4x3-box">
-											<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/speaker-1.jpg"/>
-										</div>
-									</div>
-									<div class="details">
-										<p class="name font-body-1 font-type-content primary-text-color">Jaseem Abid</p>
-									</div>
-									<div class="hover-overlay">
-										<button class="action-button font-button">VISIT BLOG</button>
-										<p class="name font-body-1 font-type-content">Jaseem Abid</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
+						
+					</div>	
 				</div>	
 			</section>
 			
@@ -237,6 +383,18 @@
 									</div>
 								</div>
 								<p class="text font-type-content font-body-1">
+									Deliberate intimidation, stalking, following, inappropriate photography or recording, sustained disruption of talks are not allowed.
+								</p>
+							</div>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone v-container">
+							<div class="card">
+								<div class="visual-holder">
+									<div class="stretched-square">
+										<img class="visual" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/cross.png"/>
+									</div>
+								</div>
+								<p class="text font-type-content font-body-1">
 									Do not harass based on gender, sexual orientation, disability, physical appearance, race or religion.
 								</p>
 							</div>
@@ -250,18 +408,6 @@
 								</div>
 								<p class="text font-type-content font-body-1">
 									Exibitors and booth staff should not use sexual imagery in words, appearance, enviornment, activities, or other material.
-								</p>
-							</div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone v-container">
-							<div class="card">
-								<div class="visual-holder">
-									<div class="stretched-square">
-										<img class="visual" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/cross.png"/>
-									</div>
-								</div>
-								<p class="text font-type-content font-body-1">
-									Deliberate intimidation, stalking, following, inappropriate photography or recording, sustained disruption of talks are not allowed.
 								</p>
 							</div>
 						</div>
@@ -328,78 +474,42 @@
 				</div>
 			</section>
 			
-			<hr style="margin: 0;">
 			
 			<!-- CONTACT US SECTION -->
-			<section class="primary-dark-bg-color over-design-overlay" id="6">
+			<section class="over-design-overlay contact" id="6"><input type="hidden" id="tocopy"/>
 				<div class="central-elements-wrapper">
 					<h3 class="section-content-title text-color-light font-type-title">Contact Us</h3>
 					<!-- Material design grid used for responsive tiles -->
 					<div class="mdl-grid mdl-grid--no-spacing" >
 						<!-- This social icons row is visible to mobile users, hidden to laptop users -->
-						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row hide-desktop-flex" style="padding: 15px 0;">
-							<a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a>
-							<a class="social-link" href="https://www.facebook.com/fossmeet" target="_blank"><i class="fa fa-facebook"></i></a>
-							<a class="social-link" href="https://www.twitter.com/fossmeet" target="_blank"><i class="fa fa-twitter"></i></a>
-							<a class="social-link" href="https://www.youtube.com/channel/UCwfNynjOSd3oPwIFqduJ9-Q" target="_blank"><i class="fa fa-youtube"></i></a>
-							<a class="social-link" href="http://webchat.freenode.net/?channels=%23FOSSCell%2C%23FOSSMeet&amp;randomnick=0" target="_blank"><i class="fa fa-hashtag"></i></a>
-						</div>
+						<!-- <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row hide-desktop-flex" style="padding: 15px 0;"> -->
+							<!-- <a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a> -->
+							<!-- <a class="social-link" href="https://www.facebook.com/fossmeet" target="_blank"><i class="fa fa-facebook"></i></a> -->
+							<!-- <a class="social-link" href="https://www.twitter.com/fossmeet" target="_blank"><i class="fa fa-twitter"></i></a> -->
+							<!-- <a class="social-link" href="https://www.youtube.com/channel/UCwfNynjOSd3oPwIFqduJ9-Q" target="_blank"><i class="fa fa-youtube"></i></a> -->
+							<!-- <a class="social-link" href="http://webchat.freenode.net/?channels=%23FOSSCell%2C%23FOSSMeet&amp;randomnick=0" target="_blank"><i class="fa fa-hashtag"></i></a> -->
+						<!-- </div> -->
+
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container" style="height: auto;">
-							<div class="mx-auto bg-white people-card">
+							<a class="people-card-wrapper"><div class="mx-auto bg-white people-card">
 								<div class="photo-hoder">
 									<div class="stretched-4x3-box">								
 										<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-2.jpg"/>
 									</div>
 								</div>
-								<div class="details">
-									<p class="designation font-body-1 font-type-content secondary-text-color">CO-ORDINATOR</p>
-									<p class="name font-body-1 font-type-content primary-text-color">Yash Agarwal</p>
-									<p class="phone font-body-1 font-type-content primary-text-color">+919995902061</p>
+								<div class="details primary-dark-bg-color">
+									<p class="designation font-body-1 font-type-content text-color-light">CO-ORDINATOR</p>
+									<p class="name font-body-1 font-type-content text-color-light">Yash Agarwal</p>
+									<p class="phone font-body-1 font-type-content text-color-light">+919995902061</p>
 								</div>
-							</div>
+								<div class="hover-overlay">
+									<p class="name font-body-1 font-type-content">CO-ORDINATOR</p>
+									<p class="name font-body-1 font-type-content">Yash Agarwal</p>
+									<button onclick="copyContentToClipboard($(this))" class="action-button font-button show-copied-tost-button"><input class="copy-text font-button" type="text" value="+91995902061" style="background: transparent; pointer-events:none;"/></button>
+								</div>
+							</div></a>
 						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container" style="height: auto;">
-							<div class="mx-auto bg-white people-card">
-								<div class="photo-hoder">
-									<div class="stretched-4x3-box">								
-										<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-2.jpg"/>
-									</div>
-								</div>
-								<div class="details">
-									<p class="designation font-body-1 font-type-content secondary-text-color">CO-ORDINATOR</p>
-									<p class="name font-body-1 font-type-content primary-text-color">Yash Agarwal</p>
-									<p class="phone font-body-1 font-type-content primary-text-color">+919995902061</p>
-								</div>
-							</div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container" style="height: auto;">
-							<div class="mx-auto bg-white people-card">
-								<div class="photo-hoder">
-									<div class="stretched-4x3-box">								
-										<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-2.jpg"/>
-									</div>
-								</div>
-								<div class="details">
-									<p class="designation font-body-1 font-type-content secondary-text-color">CO-ORDINATOR</p>
-									<p class="name font-body-1 font-type-content primary-text-color">Yash Agarwal</p>
-									<p class="phone font-body-1 font-type-content primary-text-color">+919995902061</p>
-								</div>
-							</div>
-						</div>
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container" style="height: auto;">
-							<div class="mx-auto bg-white people-card">
-								<div class="photo-hoder">
-									<div class="stretched-4x3-box">								
-										<img class="photo" src="http://triplefive.000webhostapp.com/fossmeet/sample-imgs/contact-2.jpg"/>
-									</div>
-								</div>
-								<div class="details">
-									<p class="designation font-body-1 font-type-content secondary-text-color">CO-ORDINATOR</p>
-									<p class="name font-body-1 font-type-content primary-text-color">Yash Agarwal</p>
-									<p class="phone font-body-1 font-type-content primary-text-color">+919995902061</p>
-								</div>
-							</div>
-						</div>
+						
 						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row" style="padding: 15px 0;">
 							<a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a>
 							<a class="social-link" href="https://www.facebook.com/fossmeet" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -410,6 +520,13 @@
 					</div>
 				</div>
 			</section>
+			<div class="parallax" style="background-image: url('http://triplefive.000webhostapp.com/fossmeet/sample-imgs/parallax.jpg'); height: 50vh;">
+				<div style="height: 100%; background-image: linear-gradient(to top, rgba(33, 33, 33, 0.5)1%, #212121);"></div>
+			</div>
+			
+			<div class="footer bg-dark">
+				
+			</div>
 			
 			<!-- Design overlay above sections container to display theme shapes. -->			
 			<!--div id="design-overlay">
@@ -431,7 +548,22 @@
 		</div>
 		<!-- All sections container ends here -->
 		
-
+		<!--MDL Toast "copied to clipboard"-->
+		<div id="copied-toast" class="mdl-js-snackbar mdl-snackbar">
+			<div class="mdl-snackbar__text"></div>
+			<button class="mdl-snackbar__action" type="button"></button>
+		</div>
+		<script>
+		function showCopiedToast() {
+			'use strict';
+			window['counter'] = 0;
+			var snackbarContainer = document.querySelector('#copied-toast');
+			var data = {message: 'Copied to clipboard ', timeout: 1500};
+			++counter;
+			snackbarContainer.MaterialSnackbar.showSnackbar(data);
+			console.log("Copied to clipboard");
+		};
+		</script>
 
 		
 		<!-- FAQ Overlay to display answers to faq questions -->
