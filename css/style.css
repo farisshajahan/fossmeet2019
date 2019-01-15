@@ -48,7 +48,7 @@
 		background-color: #CFD8DC;
 		}
 	.accent-bg-color {
-		background-color: #00BCD4;
+		background-color: #4F4BF0;
 		}
 	.primary-color-bg {
 		background-color: #607D8B;
@@ -70,9 +70,13 @@
 	
 	.font-type-title {
 		font-family: Lato, Arial, sans-serif;
-		text-transform: uppercase;
-		font-size: 4rem;
+		/*text-transform: uppercase;*/
+		font-size: 4.5rem;
+		/*font-weight: 900;*/
+	}
+	.bold {
 		font-weight: 900;
+		letter-spacing: -.06em;
 	}
 	.font-type-subtitle {/* Subtitle font */
 		font-size: 3rem;
@@ -91,12 +95,12 @@
 		font-family: Montserrat, Arial, sans-serif;
 	}
 		.font-body-1 {
-			font-size: 1.6rem;
+			font-size: 1.5rem;
 			font-weight: 400;
 			letter-spacing: .05rem;
 		}
 		.font-body-2 {
-			font-size: 1.4rem;
+			font-size: 1.33rem;
 			font-weight: 400;
 			letter-spacing: .025em;	
 		}
@@ -119,6 +123,24 @@
 		text-transform: uppercase;
 		font-family: Lato, Arial, sans-serif;
 	}
+/* SVG backgrounds */
+	.logo-section {
+		padding: 0;
+		position: relative;
+
+	}
+	.logo-section .bg {
+		position: absolute;
+		height: 130%;
+		width: auto;
+		left: -100%;
+		right: -100%;
+		top: 0;
+		margin: auto;
+		z-index: -1;
+	}
+
+
 
 /* General styling */
 	html, body {
@@ -128,7 +150,7 @@
 		
 	* {
 		margin: 0;
-		padding: 0;
+		
 	}
 
 	ul, li {
@@ -140,7 +162,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 50px;
+		height: 70px;
 		padding: 0 10px;
 		position: fixed;
 		top: 0;
@@ -150,9 +172,13 @@
 		transition: background-color .5s;
 		/* border-bottom: 1px solid #eeeeee; */
 		}
+	.header-bg-color {
+		background-color: #4F4BF0;
+
+	}
 	.left-logo {
 		position: absolute;
-		left: 10px;
+		left: 20px;
 	}
 	#section-title {
 		color: #455A64;
@@ -230,8 +256,10 @@
 
 
 	#header-nav #menu li a.active {
-		background-color: #eeeeee;
-		color: #455A64;
+		/*background-color: #eeeeee;*/
+		border: 2px solid #eeeeee;
+		/*color: #455A64;*/
+
 	}
 	#header-nav {
 		position: absolute;
@@ -243,15 +271,17 @@
 		display: none;
 	}
 	#header-nav {
-		height: 50px;
 		position: relative;
 		margin-right: 0;
 	}
 	#header-nav #menu li a {
 		font-size: 16px;
-		line-height: 50px;
-		padding: 0 1rem;
+		line-height: 32px;
+		padding: 0 16px;
 		color: white;
+		margin: 0 8px;
+		border: 2px solid transparent;
+		border-radius: 16px;
 	}
 
 	#collapse-nav {
@@ -345,6 +375,7 @@
 
 	.logo-section {
 		min-height: 100vh;
+
 	}
 	.parallax {
 		/* Create the parallax scrolling effect */
@@ -380,7 +411,7 @@
 		
 		/* Logo section styling */
 		.cyan-gradient {
-			background-image: linear-gradient(to top left, #00AAFF, #00FFD4);
+			background-image: linear-gradient(to top right, #C828FC, #4F4BF0);
 		}
 		/* About Section styling */
 		.about .subtitle {
@@ -392,8 +423,30 @@
 		}
 		/* Speakers section */
 		.speakers-section {
-			background-image: radial-gradient(#455A64, rgb(36, 36, 36));
-			height: auto; 
+			/*background-image: radial-gradient(#455A64, rgb(36, 36, 36));*/
+			overflow: hidden;
+			height: auto;
+			border-radius: 0 0 0 0;
+			padding-bottom: 100px;
+			padding-top: 100px;
+			position: relative;
+			margin: auto;
+		}
+		.speakers-section .bg {
+			position: absolute;
+			left: -100%;
+			right: -100%;
+			margin: auto;
+			top: -100%;
+			bottom: -100%;
+			z-index: -1;
+			height: 100%;
+			width: 150%;
+			background-image: linear-gradient(to top left, #FDAB4E, #FF5E70);
+			
+		}
+		.speakers-section .central-elements-wrapper {
+			
 		}
 		/* People's tiles styling */
 		.people-container {
@@ -408,7 +461,7 @@
 			max-width: 288px;
 			position: relative;
 			box-sizing: border-box;
-			border: 2px solid gray;
+			/*border: 2px solid transparent;*/
 			border-radius: 6px;
 			transition: border-radius .2s;
 			
@@ -449,7 +502,7 @@
 					padding: 10px;
 					color: #00BCD4;
 					cursor: pointer;
-					border-radius: 5px;	
+					border-radius: 2em;	
 					height: 50px;
 					visibility: hidden;
 					margin-bottom: 10px;
@@ -511,7 +564,6 @@
 		/* Code of Conduct Section */
 		.coc {
 			box-sizing: border-box;
-			height: auto;
 		}
 		.coc-wrapper {
 			display: flex;
@@ -571,10 +623,12 @@
 			color: black;
 		}
 		.coc .read-button {
-			padding: 1rem;
-			background-color: #00BCD4;
+			padding: .5em 1.5em;
+			background-color: #4F4BF0;
 			border-radius: 5px;
 			border: none;
+			border-radius: 2em;
+			width: 270px;
 			color: white;
 			margin-top: 1rem;
 			cursor: pointer;
@@ -609,6 +663,16 @@
 		}		
 
 		/* FAQ and related styling */
+		.faq-section {
+			border-radius: 0 100px 0 0;
+			background-image: linear-gradient(to top left, #1425A0, #4377D1);
+		}
+		#faq-list {
+			padding-left: 0;
+		}
+		#faq-list li {
+			padding-left: 1rem;
+		}
 		#faq-questions-div {
 			display: table-cell;
 			}
@@ -617,8 +681,9 @@
 				text-decoration: none;
 				color: white;
 				display: block;
-				padding: .2em 0;
+				padding: .2em 0 .2em 0;
 				cursor: pointer;
+				border-radius: 1em;
 				}
 				.faq-question:hover {
 					color: black;
@@ -812,6 +877,12 @@
 		.central-elements-wrapper-small {
 			width: 800px !important;
 		}
+		.speakers-section .bg {
+			/*transform: rotate(-6deg);*/
+		}
+		.coc {
+			min-height: 120vh;
+		}
 		#faq-answer-div {
 			right: 50px;
 			bottom: 50px;
@@ -832,6 +903,7 @@
 	section {
 		min-height: 100vh;
 	}
+	
 }
 /* This is part of code found in codepen for the navigation bar. Kept as it is,
 	It does not belong to mobile first mediaqueries group */

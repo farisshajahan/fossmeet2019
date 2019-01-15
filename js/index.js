@@ -85,7 +85,7 @@ $(document).ready(function() {
 	
 	$('#collapse-nav').find('.nav-item').on('click', toggleMenu);
 	for(i=0;i<questionsArray.length;i++){ //Filling faq questions list
-		$('#faq-list').append("<li><a onclick=\"answerFaq("+i+")\" class=\"faq-question\">&#8226; "+questionsArray[i]+"</a></li>");
+		$('#faq-list').append("<a onclick=\"answerFaq("+i+")\" class=\"faq-question\"><li>&#8226; "+questionsArray[i]+"</li></a>");
 	}
 	
 //Current viewing section based response on navigation bar links.
@@ -109,16 +109,16 @@ $(document).ready(function() {
 		var about_top = $('#2').offset().top - 50;
 		console.log("OK");
 		if(cur_pos >= about_top){
-			if($header_top.hasClass("primary-dark-bg-color")==false){
-					$header_top.toggleClass("primary-dark-bg-color");
+			if($header_top.hasClass("header-bg-color")==false){
+					$header_top.toggleClass("header-bg-color");
 			}
 			if($header_top.hasClass("mdl-shadow--2dp")==false){
 				$header_top.toggleClass("mdl-shadow--2dp");
 			}
 		}
 		else {
-			if($header_top.hasClass("primary-dark-bg-color")==true){
-				$header_top.toggleClass("primary-dark-bg-color");
+			if($header_top.hasClass("header-bg-color")==true){
+				$header_top.toggleClass("header-bg-color");
 			}
 			if($header_top.hasClass("mdl-shadow--2dp")==true){
 				$header_top.toggleClass("mdl-shadow--2dp");
