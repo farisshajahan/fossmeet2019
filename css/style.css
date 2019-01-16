@@ -127,18 +127,57 @@
 	.logo-section {
 		padding: 0;
 		position: relative;
+		width: 100%;
+
 
 	}
-	.logo-section .bg {
+	.logo-section .design-elements {
 		position: absolute;
-		height: auto;
+		height: 100%;
 		width: 100%;
 		right: 0;
 		top: 0;
 		margin: auto;
 		z-index: 0;
+		overflow: hidden;
+	}
+	.logo-section .design-elements .bg {
+		height: 100%;
+		width: auto;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		right: -100%;
+		z-index: -1;
+	}
+	.logo-section .design-elements .nav-space {
+		position: absolute;
+		width: 60%;
+		min-width: 800px;
+		height: auto;
+		top: 0;
+		right: 0;
+		z-index: 1;
+
 	}
 
+	.logo-section .design-elements .right {
+		height: 87%;
+		width: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+	}
+	.logo-section .design-elements .sunrise {
+		position: absolute;
+		bottom: 10%;
+		width: 50%;
+		height: auto;
+		left: -100px;
+		z-index: 1;
+	}
 
 
 /* General styling */
@@ -169,10 +208,13 @@
 		z-index: 12;
 		box-sizing: border-box;
 		transition: background-color .5s;
+		transition: visibility .5s;
+		visibility: hidden;
 		/* border-bottom: 1px solid #eeeeee; */
 		}
 	.header-bg-color {
-		background-image: linear-gradient(to right, #6CB9E9, white 75%);
+		background-color: white;
+		visibility: visible;
 
 	}
 	.left-logo {
@@ -373,10 +415,17 @@
 	}
 
 	.logo-section {
-		min-height: 56.25vw;
-		width: 100vw;
+		width: 100%;
+		display: block;
 
 	}
+	.logo-section .foreground {
+		height: 87%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}*/
 	.parallax {
 		/* Create the parallax scrolling effect */
 		background-attachment: fixed;
@@ -787,6 +836,13 @@
 		#header-nav {
 			display: none;
 		}
+		.logo-section {
+			height: 100vh;
+			background-image: linear-gradient(to top right, #38ABF0, #69FFD2);/* For non-laptop users */
+		}
+		.design-elements {
+			display: none;
+		}
 		#section-title {
 			letter-spacing: 0;
 			}
@@ -830,12 +886,8 @@
 		}
 	}
 	@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-		#header-nav {
-			display: grid;
-		}
-		.toggle-menu {
-			display: none;
-		}
+
+		
 		.parallax {
 			display: block;
 		}
@@ -850,6 +902,19 @@
 			}
 	}
 	@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+		#header-nav {
+			display: grid;
+		}		
+		.toggle-menu {
+			display: none;
+		}
+		.logo-section {
+			height: 115vh;
+			background-image: none;
+		}
+		.design-elements {
+			display: block;
+		}
 		#section-title {
 			padding-left: 0;
 			}
