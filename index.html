@@ -115,8 +115,9 @@
 						<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 						</filter>
 						<linearGradient id="l-right-paint0_linear" x1="114.997" y1="0.0978376" x2="113.546" y2="1079.83" gradientUnits="userSpaceOnUse">
-						<stop stop-color="#FFFFFF"/>
-						<stop offset="1" stop-color="#FF6262"/>
+						<stop stop-color="rgba(0, 170, 255, 0)"/>
+						<stop offset="1" stop-color="#00ffd4"/>
+						<!-- background-image: linear-gradient(to top left, #00AAFF, #00FFD4); -->
 						</linearGradient>
 						</defs>
 					</svg>
@@ -137,7 +138,7 @@
 						</defs>
 					</svg>
 
-					<svg class="sunrise" width="1301" height="410" viewBox="0 0 1301 410" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<!-- <svg class="sunrise" width="1301" height="410" viewBox="0 0 1301 410" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="441.174" cy="127.828" r="127" transform="rotate(0.318126 441.174 127.828)" fill="url(#l-sunrise-paint0_linear)"/>
 						<rect x="928.025" y="323.419" width="67.4076" height="27.2466" rx="13.6233" transform="rotate(0.533538 928.025 323.419)" fill="white"/>
 						<rect x="1022.18" y="320.724" width="32.1301" height="27.2466" rx="13.6233" transform="rotate(0.533538 1022.18 320.724)" fill="white"/>
@@ -175,16 +176,17 @@
 						<stop offset="1" stop-color="#FF6262"/>
 						</linearGradient>
 						</defs>
-					</svg>
+					</svg> -->
 
 					<svg class="bg" width="2597" height="1244" viewBox="0 0 2597 1244" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 0H2597V1243.83C2503.02 1250.16 2517.2 1072.96 1857.13 1072.96C1283.62 1072.96 1305.26 1243.83 710.117 1243.83C250.232 1243.83 0 1072.96 0 1072.96V0Z" fill="url(#l-bg-paint0_linear)"/>
 						<defs>
-						<linearGradient id="l-bg-paint0_linear" x1="154.874" y1="967.742" x2="1783.85" y2="-423.584" gradientUnits="userSpaceOnUse">
-						<stop stop-color="#69FFD2"/>
-						<stop offset="0.248619" stop-color="#4ACBE5"/>
-						<stop offset="0.801105" stop-color="#38ABF0"/>
-						<stop offset="1" stop-color="#95D0E2"/>
+						<linearGradient id="l-bg-paint0_linear" x2="154.874" y1="967.742" x1="1783.85" y2="-423.584" gradientUnits="userSpaceOnUse">
+						<!-- <stop stop-color="#69FFD2"/> -->
+						<stop offset="0.248619" stop-color="#00AAFF"/>
+						<stop offset="0.801105" stop-color="#00FFD4"/>
+						<!-- <stop offset="1" stop-color="#00FFD4"/> -->
+						
 						</linearGradient>
 						</defs>
 					</svg>
@@ -304,7 +306,7 @@
 											<p class="name font-body-1 font-type-content primary-text-color">Richard Stallman</p>
 										</div>
 										<div class="hover-overlay">
-											<button class="action-button font-button" onclick="visitSite('https://stallman.org/');">VISIT SITE</button>
+											<button class="action-button font-type-subtitle" onclick="visitSite('https://stallman.org/');">VISIT SITE</button>
 											<p class="name font-body-1 font-type-content">Richard Stallman</p>
 										</div>
 									</div>
@@ -444,7 +446,7 @@
 								</a>
 							</div>
 							
-							<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop people-container">
 								<a class="people-card-wrapper">
 									<div class="mx-auto bg-white mdl-shadow--2dp people-card">
 										<div class="photo-holder">
@@ -482,7 +484,7 @@
 								</a>
 							</div>
 							
-							<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
+							<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--2-offset-tablet people-container">
 								<a class="people-card-wrapper">
 									<div class="mx-auto bg-white mdl-shadow--2dp people-card">
 										<div class="photo-holder">
@@ -624,7 +626,7 @@
 						<h3 class="section-content-title text-color-light font-type-title"><b class="bold">FREQUENTLY </b>Asked Questions</h3>
 						<!-- list's font size is specifically styled to override material design library (>_<) -->
 						<!-- List items are entered by javascript -->
-						<ul id="faq-list" class="font-body-1 font-type-content">
+						<ul id="faq-list" class="font-body-1 font-type-content"><hr>
 						</ul>
 					</div>
 					<!-- Answers are displayed on popup outside of fullpage influence to support phone view. It's html is after fullpage container-->
@@ -667,13 +669,13 @@
 							</div></a>
 						</div>
 						
-						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row" style="padding: 15px 0;">
+						<!-- <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row" style="padding: 15px 0;">
 							<a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a>
 							<a class="social-link" href="https://www.facebook.com/fossmeet" target="_blank"><i class="fa fa-facebook"></i></a>
 							<a class="social-link" href="https://www.twitter.com/fossmeet" target="_blank"><i class="fa fa-twitter"></i></a>
 							<a class="social-link" href="https://www.youtube.com/channel/UCwfNynjOSd3oPwIFqduJ9-Q" target="_blank"><i class="fa fa-youtube"></i></a>
 							<a class="social-link" href="http://webchat.freenode.net/?channels=%23FOSSCell%2C%23FOSSMeet&amp;randomnick=0" target="_blank"><i class="fa fa-hashtag"></i></a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</section>
@@ -683,6 +685,16 @@
 			
 			<div class="footer bg-dark">
 				
+				<div class="mdl-grid mdl-grid--no-spacing">
+					<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone social-icons-row" style="padding: 15px 0;">
+						<a class="social-link" href="https://poddery.com/u/fossmeet" target="_blank"><i class="fa fa-asterisk"></i></a>
+						<a class="social-link" href="https://www.facebook.com/fossmeet" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a class="social-link" href="https://www.twitter.com/fossmeet" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a class="social-link" href="https://www.youtube.com/channel/UCwfNynjOSd3oPwIFqduJ9-Q" target="_blank"><i class="fa fa-youtube"></i></a>
+						<a class="social-link" href="http://webchat.freenode.net/?channels=%23FOSSCell%2C%23FOSSMeet&amp;randomnick=0" target="_blank"><i class="fa fa-hashtag"></i></a>
+					</div>
+				</div>
+				<p class="font-body-2 font-type-content"> Designed by FOSSCell Website Team </p>
 			</div>
 			
 			<!-- Design overlay above sections container to display theme shapes. -->			

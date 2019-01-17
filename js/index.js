@@ -85,7 +85,7 @@ $(document).ready(function() {
 	
 	$('#collapse-nav').find('.nav-item').on('click', toggleMenu);
 	for(i=0;i<questionsArray.length;i++){ //Filling faq questions list
-		$('#faq-list').append("<a onclick=\"answerFaq("+i+")\" class=\"faq-question\"><li>&#8226; "+questionsArray[i]+"</li></a>");
+		$('#faq-list').append("<a onclick=\"answerFaq("+i+")\" class=\"faq-question\"><li>&#8226; "+questionsArray[i]+"</li></a><hr>");
 	}
 	
 //Current viewing section based response on navigation bar links.
