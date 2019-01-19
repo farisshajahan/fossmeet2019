@@ -27,10 +27,10 @@ $(document).ready(function() {
 	var questionsArray = [
 		"Do you provide participation certificates?",
 		"How do I reach NIT Calicut?",
-		"How do I register for the FOSSMeet '18?",
+		"How do I register for the FOSSMeet '19?",
 		"What is your refund policy?",
 		"Is food provided during the event?",
-		"Do we get T-shirts for FOSSMeet '18?",
+		"Do we get T-shirts for FOSSMeet '19?",
 		"Are there any separate fees for talks/workshops?",
 		"Can I register for specific workshops/talks?",
 		"Will accommodation be provided?",
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		
 		"Yes, food will be provided. The registration fee is inclusive of dinner on Friday, breakfast, lunch and dinner on Saturday and, breakfast and lunch on Sunday.*",
 		
-		"Yes, all participants of FOSSMeet '18 get free T-shirts!* :)",
+		"Yes, all participants of FOSSMeet '19 get free T-shirts!* :)",
 		
 		"No separate fee for talks/workshops.",
 		
