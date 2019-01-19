@@ -42,7 +42,7 @@
 		color: #757575;
 		}
 	.primary-dark-bg-color {
-		background-color: #455A64;
+		background-color: #2D5782;
 		}
 	.primary-light-bg-color {
 		background-color: #CFD8DC;
@@ -255,7 +255,9 @@
 			.toggle-menu i:nth-child(3) {
 				top: 32px;
 			}
-
+			.open-menu {
+				background-color: white;
+			}
 			.open-menu i:nth-child(1) {
 				top: 25px;
 				-webkit-transform: rotateZ(45deg);
@@ -341,12 +343,9 @@
 		transition: border .2s;
 		line-height: 25px;
 	}
-	#collapse-nav li a:hover {
-		border-bottom: 3px solid #00BCD4;
-	}
 
 	#collapse-nav li a.active {
-		background: #00BCD4;
+		background: #00AAFF;
 		color: white;
 	}
 
@@ -407,7 +406,7 @@
 /* Sections and child items styling 
 -----------------------------------*/
 	section {
-		/* min-height: 100vh; */
+		/*min-height: 100vh; */
 		display: flex;
 		flex-direction: column;
 		position: relative;
@@ -426,7 +425,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}*/
+	}
 	.parallax {
 		/* Create the parallax scrolling effect */
 		background-attachment: fixed;
@@ -471,6 +470,32 @@
 			font-family: Lato, Arial, sans-serif;
 			text-align: center;
 		}
+		.about .design-elements .circle-left-top-1 {
+			position: relative;
+			display: inline;
+			left: 40px;
+			top: 10%;
+			width: auto;
+			height: 80%;
+		}
+		.about .design-elements .circle-left-top-2 {
+			position: relative;
+			display: inline;
+			left: 0;
+			top: 5%;
+			width: 90px;
+			height: auto;
+		}
+		.about .design-elements .circle-left-top-3 {
+			position: relative;
+			display: block;
+			left: 0;
+			top: 0;
+			width: 100px;
+			height: auto;
+		}
+
+
 		/* Speakers section */
 		.speakers-section {
 			overflow: hidden;
@@ -479,27 +504,26 @@
 			position: relative;
 			margin: auto;
 			/*background-image: linear-gradient(to top left, #FDAB4E, #FF5E70);*/
-			background-image: radial-gradient(gray, black);
-			padding-top: 15vw;
-			padding-bottom: 15vw;
+			background-image: linear-gradient(to bottom right, #FF5E70, #FDA750);
+			
 		}
 		.speakers-section .foreground {
 
 		}
 		.speakers-section .design-elements .top {
 			height: auto;
-			width: 100%;
+			width: 110%;
 			position: absolute;
-			top: 0;
+			top: -3px;
 			left: -100%;
 			right: -100%;
 			margin: auto;
 		}
 		.speakers-section .design-elements .bottom {
 			height: auto;
-			width: 100%;
+			width: 110%;
 			position: absolute;
-			bottom: 0;
+			bottom: -3px;
 			left: -100%;
 			right: -100%;
 			margin: auto;
@@ -528,7 +552,7 @@
 			
 			}
 			.people-card-wrapper:hover .people-card {
-				border: 2px solid #00BCD4;
+				border: 2px solid #00AAFF;
 				border-radius: 2rem;
 			}
 			.people-card .hover-overlay {
@@ -550,7 +574,7 @@
 				}
 				.people-card .hover-overlay .name{
 					visibility: hidden;
-					color: #00BCD4;
+					color: #00AAFF;
 					font-weight: 500;
 					margin: 0 0 0 0;
 				}
@@ -559,9 +583,9 @@
 					}
 				.people-card .hover-overlay .action-button {
 					background-color: transparent;
-					border: 2px solid #00BCD4;
+					border: 2px solid #00AAFF;
 					padding: 0 16px;
-					color: #00BCD4;
+					color: #00AAFF;
 					cursor: pointer;
 					font-size: 16px;
 					border-radius: 2em;	
@@ -579,7 +603,7 @@
 					.people-card .hover-overlay .action-button .copy-text {
 						pointer-events: none;
 						background-color: transparent;
-						color: #00BCD4;
+						color: #00AAFF;
 						border: 0;
 						text-align: center;
 						width: 150px;
@@ -594,7 +618,7 @@
 						visibility: visible;
 					}
 				.people-card .hover-overlay .action-button:hover {
-					background-color: #00BCD4;
+					background-color: #00AAFF;
 					color: white;
 				}
 					.people-card .hover-overlay .action-button:hover .copy-text {
@@ -698,7 +722,7 @@
 		}
 		.coc .read-button {
 			padding: .5em 1.5em;
-			background-color: #38ABF0;
+			background-color: #00AAFF;
 			border-radius: 5px;
 			border: none;
 			border-radius: 2em;
@@ -738,12 +762,30 @@
 
 		/* FAQ and related styling */
 		.faq-section {
-			border-radius: 0 100px 0 0;
-			background-image: linear-gradient(to bottom, #455A64, #758A94);
+			
+			background-image: linear-gradient(to bottom right, #4377D1, #111E9B);
 			background-color: #455A64;
 			padding: 100px 0;
-			max-width: 1125px;
+			
 			margin: 0 auto;
+		}
+		.faq-section .design-elements .top {
+			height: auto;
+			width: 110%;
+			position: absolute;
+			top: -3px;
+			left: -100%;
+			right: -100%;
+			margin: auto;
+		}
+		.faq-section .design-elements .bottom {
+			height: auto;
+			width: 110%;
+			position: absolute;
+			bottom: -3px;
+			left: -100%;
+			right: -100%;
+			margin: auto;
 		}
 		#faq-list {
 			padding-left: 0;
@@ -807,19 +849,19 @@
 				border-radius: 5px;
 				}
 				#faq-answer-div-question {
-					color: #00BCD4;
+					color: #00AAFF;
 					font-weight: bold;
 				}
 				#faq-answer-div .close {
 					background-color: transparent;
-					border: 2px solid #00BCD4;
-					padding: 10px;
-					color: #00BCD4;
+					border: 2px solid #00AAFF;
+					padding: 5px 10px;
+					color: #00AAFF;
 					cursor: pointer;
-					border-radius: 5px;
+					border-radius: 36px;
 				}
 				#faq-answer-div .close:hover {
-					background-color: #00BCD4;
+					background-color: #00AAFF;
 					color: white;
 				}
 				#faq-anwer-div #faq-answer-div-answer .list {
@@ -830,6 +872,7 @@
 			.contact {
 				/* background-image: radial-gradient(gray, #222222); */
 				background-color: #212121;
+				min-height: 0;
 			}
 		/* Social links and icons styling */
 			.social-icons-row {
@@ -846,7 +889,7 @@
 					font-size:20px;
 					padding:10px;
 					margin:5px;
-					background-color: #607D8B;
+					background-color: #2D5782;
 					transition: background-color .3s;
 					text-align:center;
 					border-radius:100%;
@@ -860,7 +903,7 @@
 					.social-link:hover {
 						background-color:#fff;
 						text-decoration:none;
-						color: #00BCD4;
+						color: #00AAFF;
 					}
 	/*Footer */
 		.footer {
@@ -952,12 +995,19 @@
 			height: 115vh;
 			background-image: none;
 		}
-		.logo-section .design-elements {
+		.design-elements {
 			display: block;
 		}
+		.about {
+			padding-top: 100px;
+		}
 		.speakers-section {
-			padding: 100px 0;
-			max-width: 1125px;
+			padding-top: 11vw;
+			padding-bottom: 11vw;
+		}
+		.faq-section {
+			padding-top: 11vw;
+			padding-bottom: 11vw;
 		}
 		#section-title {
 			padding-left: 0;
@@ -1003,17 +1053,7 @@
 			display: none;
 		}
 	}
-	@media (min-width: 1126px) {
-		.speakers-section {
-			border-radius: 60px 0 60px 0;
-			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-		}
-		.faq-section {
-			border-radius: 60px 0 60px 0;
-			margin-bottom: 100px;
-			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-		}
-	}
+
 	@media (min-width:1281px) { /* hi-res laptops and desktops */ 
 		.central-elements-wrapper {
 		}
