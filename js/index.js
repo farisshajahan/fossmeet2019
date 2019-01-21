@@ -25,47 +25,39 @@ $(document).ready(function() {
 // FAQ Questions and its answers
 //------------------------------
 	var questionsArray = [
-		"Do you provide participation certificates?",
-		"How do I reach NIT Calicut?",
 		"How do I register for the FOSSMeet '19?",
-		"What is your refund policy?",
+		"Will accommodation be provided?",
 		"Is food provided during the event?",
-		"Do we get T-shirts for FOSSMeet '19?",
 		"Are there any separate fees for talks/workshops?",
 		"Can I register for specific workshops/talks?",
-		"Will accommodation be provided?",
 		"Is it necessary for each participant to register?",
+		"Do we get T-shirts for FOSSMeet '19?",
+		"Do you provide participation certificates?",
+		"How do I reach NIT Calicut?",
+		"What is your refund policy?",
 		"Will I get a confirmation mail after registration?"
 	];
 	var answersArray = [
-		"Last year, we had a lot of students attending the event merely for the sake of getting certificates. We have decided that we will not be issuing participation certificates for this edition of FOSSMeet.",
-		
+		"Registrations are scheduled to start on or before 27-01-2019. Registration link will be available in this website.</br>"+
+    "Participants will be required to fill up a form gathering basic information regarding the participant. Due to limited seats, these requests will undergo a screening based on the information collected through the form. Accepted participants will receive an email with a link to a payment portal through which the registration fees can be paid within a stipulated time period. After validation from our end, the participants who have successfully completed payment will recieve a final confirmation email from us.</br>"+
+   "The registration fee will be around ₹ 800 for students and ₹ 1,200 for professionals. The exact amount will be known when registrations are open.",
+   		"Yes, different accomodation facilities will be provided for the students and the professionals from friday night till Sunday night, for the entire duration of FOSSMeet. Accomodation charges (for the entire FOSSMeet event)+:<br><br>"+
+		"<ul class=\"list font-type-content font-body-1\">"+
+			"<li>Students: &#8377;100 - &#8377;150*</li>"+
+			"<li>Professionals: &#8377;200 - &#8377;400*</li>"+
+		"</ul>",
+		"Yes, food will be provided. The registration fee is inclusive of dinner on Friday, breakfast, lunch and dinner on Saturday and, breakfast and lunch on Sunday.*",
+		"No separate fee for talks/workshops.",
+		"No, there is no separate registration for specific talks/workshops. However, since workshops run in parallel, you may be asked to indicate your preferred workshop while reporting for the event. Admittance to workshops will be on this preference in first come first served order.",
+		"Yes, each participant has to register seperately in the website. This it to keep track of your workshop/talk preference, food preference and hostel accommodation.",
+		"Yes, all participants of FOSSMeet '19 get free T-shirts!* :)",	
+		"Yes, each participant shall receive a participation certificate on completion of the event. We request participants, not to register for the event merely for the certificate. You might be denying the opportunity of a genuinely interested candidate :) ",		
 		"NITC is well connected by railway, air and road facilities. All major stations in India have trains to Kozhikode Railway station(CLT). The Kozhikode International Airport(CCJ) provides daily flights to and from major cities in India.<br>"+
 		"</br><b class=\"faq-answer-subtitle\">From Airport:</b></br>"+
 		"Take a cab directly to NIT Calicut.</br>"+
 		"</br><b class=\"faq-answer-subtitle\">From Railway Station:</b></br>"+
-		"Take a cab directly to NIT Calicut or take a bus (towards Mukkam or REC/NIT) from Palayam bus stand, Kozhikode.",
-		
-		"Online registrations have already started in FOSSMeet.in. Spot registrations can also be availed*. The seats will be filled in the first come first served manner. Online registrations will be given preference over on-spot registrations. There are only a total of 150 seats available.",
-		
-		"Refund unless for genuine reasons will not be entertained. However, we will refund 50% of the amount paid, excluding service charges. To initiate a refund, send a mail to info@fossmeet.in and we will contact you.",
-		
-		"Yes, food will be provided. The registration fee is inclusive of dinner on Friday, breakfast, lunch and dinner on Saturday and, breakfast and lunch on Sunday.*",
-		
-		"Yes, all participants of FOSSMeet '19 get free T-shirts!* :)",
-		
-		"No separate fee for talks/workshops.",
-		
-		"No, you can't register for specific workshops/talks. There is no explicit registration fees for specific workshops/talks.",
-		
-		"Yes, different accomodation facilities will be provided for the students and the professionals from friday night till Sunday night, for the entire duration of FOSSMeet. Accomodation charges (for the entire FOSSMeet event)+:<br><br>"+
-		"<ul class=\"list font-type-content font-body-1\">"+
-			"<li>Students: &#8377;50 - &#8377;100*</li>"+
-			"<li>Professionals: &#8377;200 - &#8377;400*</li>"+
-		"</ul>",
-		
-		"Yes, each participant has to register seperately in the website. This it to keep track of your workshop/talk preference, food preference and hostel accommodation.",
-		
+		"Take a cab directly to NIT Calicut or take a bus (towards Mukkam or REC/NIT) from Palayam bus stand, Kozhikode.",		
+		"Refund unless for genuine reasons will not be entertained. However, we will refund 50% of the amount paid, excluding service charges. To initiate a refund, send a mail to info@fossmeet.in and we will contact you.",			
 		"Yes, By February 15th, you will receive a confirmation mail from the FOSSMeet team."
 	];
 
