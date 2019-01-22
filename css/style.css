@@ -765,12 +765,7 @@
 		}
 	}
 	@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-		#header-nav {
-			display: grid;
-		}
-		.toggle-menu {
-			display: none;
-		}
+
 		.parallax {
 			display: block;
 		}
@@ -784,6 +779,15 @@
 			display: block;
 			}
 	}
+	@media (min-width: 821px) {
+		#header-nav {
+			display: grid;
+		}
+		.toggle-menu {
+			display: none;
+		}
+	}
+
 	@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
 		#section-title {
 			padding-left: 0;

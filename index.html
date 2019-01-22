@@ -48,7 +48,10 @@
 							<a class="nav-item font-type-subtitle" href="#5">FAQ</a>
 						</li>
 						<li style="display: table-cell">
-							<a class="nav-item font-type-subtitle" href="#6">CONTACT US</a>
+							<a class="nav-item font-type-subtitle" href="#6">SPONSORS</a>
+						</li>
+						<li style="display: table-cell">
+							<a class="nav-item font-type-subtitle" href="#7">CONTACT US</a>
 						</li>
 					</ul>
 				</nav>
@@ -77,7 +80,10 @@
 						<a class="nav-item font-button" href="#5">FAQ</a>
 					</li>
 					<li>
-						<a class="nav-item font-button" href="#6">Contact Us</a>
+						<a class="nav-item font-button" href="#6">SPONSORS</a>
+					</li>
+					<li>
+						<a class="nav-item font-button" href="#7">Contact Us</a>
 					</li>
 				</ul>
 			</nav>
@@ -288,7 +294,6 @@
 								</div>
 							</a>
 						</div>
-
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone people-container">
 							<a class="people-card-wrapper">
 								<div class="mx-auto bg-white mdl-shadow--2dp people-card">
@@ -345,7 +350,6 @@
 								</div>
 							</a>
 						</div> -->
-
 					</div>
 				</div>
 			</section>
@@ -478,12 +482,32 @@
 				.sponsors-section {
 					width: 100%;
 					padding: 25px 0;
+					
+				}
+				.sponsors-section .central-elements-wrapper {
+				}
+				.sponsors-section .section-content-title {
+					margin-top: 0;
+					margin-bottom: 1em;
+					text-align: center;
+					padding: 0 1rem;
+					color: #455A64;
+				}
+				.sponsors-section .central-elements-wrapper {
+					/*border-left: 5px solid #4e4e4e; 
+					border-right: 5px solid #4e4e4e;*/
+				}
+				.sponsors-section .section-content-title {
+					margin-top: 0;
+					margin-bottom: 1em;
+					text-align: center;
+					padding: 0 1rem;
 				}
 				.sponsors-section .logo-container {
 					display: flex;
-					padding-top: 25px;
-					padding-left: 25px;
-					padding-right: 25px;
+					align-items: center;
+					justify-content: center;
+					padding: 10px;
 
 				}
 
@@ -491,26 +515,88 @@
 					width: 163px;
 					max-width: 100%;
 					height: auto;
-					align-self: center;
+					
 					margin: 0 auto;
 				}
+
+				.sponsors-section .kind-group {
+					border-radius: 10px;
+					overflow: hidden;
+					background-color: white;
+					box-shadow: none;
+
+					
+				}
+
+				.sponsors-section .subtitle {
+					margin-top: 0;
+					margin-bottom: .5em;
+					background-color: #FFF;
+					line-height: 2em;
+					font-size: 2rem;
+					text-align: center;
+					color: #4e4e4e;
+					border-bottom: 4px solid;
+					border-top: 4px solid;
+				}
+
+				.sponsors-section .mdl-grid .mdl-cell {
+					min-height: 100px;
+				}
+
+				.sponsors-section hr {
+					display: none;
+				}
+
+				.sponsors-section br {
+					display: block;
+				}
+
+				@media screen and (max-width: 961px){
+					.sponsors-section .central-elements-wrapper {
+						width: 100%;
+						padding: 0;
+					}
+					.sponsors-section .kind-group {
+						box-shadow: none;
+						border-radius: 0;
+					}
+					.sponsors-section hr {
+						display: block;
+					}
+					.sponsors-section br {
+						display: none;
+					}
+				}
 			</style>
-			<section class="sponsors-section" style="">
-				<div class="central-elements-wrapper" style="border-left: 5px solid #4e4e4e; border-right: 5px solid #4e4e4e">
-					<h3 style="margin: 0;text-align: center;" class="section-content-title font-type-title primary-text-color">OUR SPONSORS</h3>
-					<div class="mdl-grid mdl-grid--no-spacing" style="width: 100%;">
-						<div class="mdl-cell mdl-cell--3-offset-desktop logo-container mdl-cell--4-col mdl-cell--3-col-desktop">
-							<a href="https://nilenso.com/"><img src="resources/img/sponsors/nilenso.png" class="logo" /></a>
-						</div>
-						<div class="mdl-cell logo-container mdl-cell--4-col mdl-cell--3-col-desktop">
-							<a href="https://www.stickermule.com/supports/fossmeet"><img src="resources/img/sponsors/stickermule.jpg" class="logo" /></a>
+			<section id="6" class="sponsors-section" style="">
+				<div class="central-elements-wrapper">
+					<h3 class="section-content-title font-type-title primary-text-color">OUR SPONSORS</h3>
+					<div class="kind-group mdl-shadow--2dp">
+						<h4 class="subtitle primary-text-color" style="border-radius: 6px; width: 70%; margin-left: 15%; border-color: #F8337D; font-weight: 700;">TITLE SPONSOR</h4>
+						<div class="mdl-grid mdl-grid--no-spacing" style="width: 100%;">
+							<div class="mdl-cell mdl-cell--4-offset-desktop logo-container mdl-cell--4-col">
+								<a href="https://nilenso.com/"><img src="resources/img/sponsors/nilenso.png" class="logo" /></a>
+							</div>
 						</div>
 					</div>
+					<br>
+					<br>
+					<div class="kind-group mdl-shadow--2dp">
+						<h5 class="subtitle primary-text-color" style="border-radius: 6px; width: 70%; margin-left: 15%; border-color: #F16821; font-weight: 700;">STICKER SPONSOR</h5>
+
+						<div class="mdl-grid mdl-grid--no-spacing" style="width: 100%;">
+							<div class="mdl-cell mdl-cell--4-offset-desktop logo-container mdl-cell--4-col">
+								<a href="https://www.stickermule.com/supports/fossmeet"><img src="resources/img/sponsors/stickermule.jpg" class="logo" /></a>
+							</div>
+						</div>
+					</div>
+					<hr>
 				</div>
 			</section>
 
 			<!-- CONTACT US SECTION -->
-			<section class="over-design-overlay contact" id="6"><input type="hidden" id="tocopy"/>
+			<section class="over-design-overlay contact" id="7"><input type="hidden" id="tocopy"/>
 				<div class="central-elements-wrapper">
 					<h3 class="section-content-title text-color-light font-type-title">Contact Us</h3>
 					<!-- Material design grid used for responsive tiles -->
@@ -572,7 +658,6 @@
 							<a class="social-link" href="https://www.twitter.com/fossmeet" target="_blank"><i class="fa fa-twitter"></i></a>
 							<a class="social-link" href="https://t.me/fossmeet19" target="_blank"><i class="fa fa-telegram"></i></a>
 							<a class="social-link" href="https://www.youtube.com/channel/UCwfNynjOSd3oPwIFqduJ9-Q" target="_blank"><i class="fa fa-youtube"></i></a>
-							<a class="social-link" href="http://webchat.freenode.net/?channels=%23FOSSCell%2C%23FOSSMeet&amp;randomnick=0" target="_blank"><i class="fa fa-hashtag"></i></a>
 						</div>
 					</div>
 				</div>
