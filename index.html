@@ -479,11 +479,21 @@
 					width: 100%;
 					padding: 25px 0;
 				}
+				.sponsors-section .central-elements-wrapper {
+					/*border-left: 5px solid #4e4e4e; 
+					border-right: 5px solid #4e4e4e;*/
+				}
+				.sponsors-section .section-content-title {
+					margin-top: 0;
+					margin-bottom: 1em;
+					text-align: center;
+					padding: 0 1rem;
+				}
 				.sponsors-section .logo-container {
 					display: flex;
-					padding-top: 25px;
-					padding-left: 25px;
-					padding-right: 25px;
+					align-items: center;
+					justify-content: center;
+					padding: 10px;
 
 				}
 
@@ -491,21 +501,69 @@
 					width: 163px;
 					max-width: 100%;
 					height: auto;
-					align-self: center;
+					
 					margin: 0 auto;
+				}
+
+				.sponsors-section .kind-group {
+					/*border: 1px solid black;*/
+					border-radius: 20px;
+					overflow: hidden;
+					
+				}
+
+				.sponsors-section .subtitle {
+					margin-top: 0;
+					margin-bottom: .5em;
+					background-color: #eeeeee;
+					line-height: 2em;
+					font-size: 2rem;
+					text-align: center;
+					color: #4e4e4e;
+				}
+
+				.sponsors-section .mdl-grid .mdl-cell {
+					min-height: 100px;
+				}
+
+				.sponsors-section hr {
+					display: none;
+				}
+				@media screen and (max-width: 961px){
+					.sponsors-section .central-elements-wrapper {
+						width: 100%;
+						padding: 0;
+					}
+					.sponsors-section .kind-group {
+						box-shadow: none;
+						border-radius: 0;
+					}
+					.sponsors-section hr {
+						display: block;
+					}
 				}
 			</style>
 			<section class="sponsors-section" style="">
-				<div class="central-elements-wrapper" style="border-left: 5px solid #4e4e4e; border-right: 5px solid #4e4e4e">
-					<h3 style="margin: 0;text-align: center;" class="section-content-title font-type-title primary-text-color">OUR SPONSORS</h3>
-					<div class="mdl-grid mdl-grid--no-spacing" style="width: 100%;">
-						<div class="mdl-cell mdl-cell--3-offset-desktop logo-container mdl-cell--4-col mdl-cell--3-col-desktop">
-							<a href="https://nilenso.com/"><img src="resources/img/sponsors/nilenso.png" class="logo" /></a>
-						</div>
-						<div class="mdl-cell logo-container mdl-cell--4-col mdl-cell--3-col-desktop">
-							<a href="https://www.stickermule.com/supports/fossmeet"><img src="resources/img/sponsors/stickermule.jpg" class="logo" /></a>
+				<div class="central-elements-wrapper">
+					<h3 class="section-content-title font-type-title primary-text-color">OUR SPONSORS</h3>
+					<div class="kind-group mdl-shadow--2dp">
+						<h4 class="subtitle primary-text-color">TITLE SPONSOR</h4>
+						<div class="mdl-grid mdl-grid--no-spacing" style="width: 100%;">
+							<div class="mdl-cell mdl-cell--4-offset-desktop logo-container mdl-cell--4-col">
+								<a href="https://nilenso.com/"><img src="resources/img/sponsors/nilenso.png" class="logo" /></a>
+							</div>
 						</div>
 					</div>
+					<br>
+					<div class="kind-group mdl-shadow--2dp">
+						<h4 class="subtitle primary-text-color">STICKER SPONSOR</h4>
+						<div class="mdl-grid mdl-grid--no-spacing" style="width: 100%;">
+							<div class="mdl-cell mdl-cell--4-offset-desktop logo-container mdl-cell--4-col">
+								<a href="https://www.stickermule.com/supports/fossmeet"><img src="resources/img/sponsors/stickermule.jpg" class="logo" /></a>
+							</div>
+						</div>
+					</div>
+					<hr>
 				</div>
 			</section>
 			
